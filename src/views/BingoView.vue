@@ -25,7 +25,7 @@ const navigate = () => {
 
 <template>
   <main>
-    <h1>Create or open with id</h1>
+    <h2>Create or open with id</h2>
     <div>
         <RouterLink to="/bingo/new">Create new card</RouterLink>
     </div>
