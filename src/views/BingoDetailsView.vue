@@ -18,12 +18,6 @@ const {
 
 onMounted(() => fetchCard(props.id));
 
-const shouldShowTooltip = (text: string) => {
-  // Implement logic to determine if the text is overflowing and needs a tooltip
-  // This might depend on the length of the text and/or the size of the container
-  return text.length > 50; // Replace `certainLength` with the appropriate number
-};
-
 watch(
   () => props.id,
   (newId) => fetchCard(newId),
@@ -36,15 +30,27 @@ const toggleField = (rowIndex: number, colIndex: number) => {
 };
 </script>
 <template>
-  <div v-if="loading">
+  <div v-if="loading" class="flex flex-center q-pa-md" style="height: 100vh">
     <q-spinner color="primary" size="50px"></q-spinner>
   </div>
+
   <div v-else-if="!loading && bingoCard !== null">
     <q-card class="my-card">
       <q-card-section>
-        <div class="text-h4 text-center q-pb-md">Bingo Card</div>
-        <div class="text-center text-h5">{{ bingoCard?.episode }}</div>
-        <div class="text-center text-subtitle2">{{ bingoCard?.id }}</div>
+        <div class="text-center text-h6">{{ bingoCard?.episode }}</div>
+        <div class="text-center text-subtitle1">{{ bingoCard?.id }}</div>
+        <div
+          v-if="bingoFound"
+          class="q-ma-md text-h5 text-center text-positive"
+        >
+          Bingo!
+        </div>
+        <div
+          v-if="lobbyHoeBingoFound"
+          class="q-ma-md text-h5 text-center text-positive"
+        >
+          LobbyHoe-Bingo!
+        </div>
         <q-separator></q-separator>
         <div class="q-pa-md">
           <div
@@ -66,26 +72,10 @@ const toggleField = (rowIndex: number, colIndex: number) => {
               <span class="text-truncate">{{
                 bingoCard.bingoFacts[rowIndex][colIndex]
               }}</span>
-              <q-tooltip
-                v-if="
-                  shouldShowTooltip(bingoCard.bingoFacts[rowIndex][colIndex])
-                "
-              >
+              <q-tooltip>
                 {{ bingoCard.bingoFacts[rowIndex][colIndex] }}
               </q-tooltip>
             </q-btn>
-          </div>
-          <div
-            v-if="bingoFound"
-            class="q-ma-md text-h5 text-center text-positive"
-          >
-            Bingo!
-          </div>
-          <div
-            v-if="lobbyHoeBingoFound"
-            class="q-ma-md text-h5 text-center text-positive"
-          >
-            LobbyHoe-Bingo!
           </div>
         </div>
       </q-card-section>
@@ -109,22 +99,44 @@ const toggleField = (rowIndex: number, colIndex: number) => {
   max-width: 800px;
   margin: 0 auto; /* Centers the card on the page */
 }
+
 .row-spacing {
   margin-bottom: 16px;
 }
+
 .bingo-btn {
-  width: 120px;
-  height: 120px;
+  width: calc(100% / 5 - 16px); /* Adjust the width dynamically */
+  min-width: 50px;
+  height: 120px; /* You might want to make this dynamic as well */
   font-size: 12px;
+  padding: 0; /* Adjust padding if necessary */
 }
+
+/* Adjust button sizes and font for smaller screens */
+@media (max-width: 599px) {
+  .bingo-btn {
+    height: 50px; /* Smaller buttons on mobile */
+    font-size: 8px; /* Further reduce font size */
+  }
+
+  .text-truncate {
+    font-size: 8px; /* Smaller font size for text inside the button */
+    padding: 2px; /* Adjust padding */
+    max-height: 45px; /* Set a max height */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis to overflow text */
+  }
+}
+
 /* Style for the Bingo Found label */
 .text-positive {
   background: #dff0d8;
   border-radius: 8px;
   padding: 10px;
 }
+
 .text-truncate {
-  white-space: normal;
+  white-space: break-spaces;
   overflow: hidden;
   text-overflow: ellipsis;
 }
