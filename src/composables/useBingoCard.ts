@@ -1,7 +1,7 @@
 import { ref, readonly, computed } from "vue";
 import validateBingoValues, {
   validateLobbyHoeBingo,
-} from "../utils/validateBingoValues.ts";
+} from "@/utils/validateBingoValues";
 
 const defaultBingoValues = () =>
   Array(5)

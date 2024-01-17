@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import useBingoCard from "../composables/useBingoCard.ts";
+import useBingoCard from "@/composables/useBingoCard";
 
 const router = useRouter();
 

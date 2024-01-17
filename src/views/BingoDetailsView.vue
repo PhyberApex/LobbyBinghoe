@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
-import useBingoCard from "../composables/useBingoCard.ts";
+import useBingoCard from "@/composables/useBingoCard";
 
 const props = defineProps<{
   id: string;
