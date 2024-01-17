@@ -15,7 +15,32 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      component: () => import("../views/ImpressumView.vue"),
+    },
+    {
+      path: "/bingo",
+      name: "bingo",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/BingoView.vue"),
+    },
+    {
+      path: "/bingo/new",
+      name: "create-bingo",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/BingoCreateView.vue"),
+    },
+    {
+      path: "/bingo/card/:id",
+      name: "bingo-details",
+      props: true,
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/BingoDetailsView.vue"),
     },
   ],
 });
