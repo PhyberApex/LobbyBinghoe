@@ -1,50 +1,56 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView, RouterLink } from "vue-router";
+import { ref } from "vue";
+const leftDrawerOpen = ref(false);
+const toggleLeftDrawer = () => {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+};
 </script>
 
 <template>
-  <header>
-    <div>
-      <h1>LobbyBinghoe</h1>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/bingo">Binghoe</RouterLink>
-        <RouterLink to="/about">Impressum</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <q-layout view="hHh lpR fFf">
+    <q-header elevated class="bg-primary text-white">
+      <q-toolbar>
+        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
-  <RouterView />
+        <q-toolbar-title>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+          </q-avatar>
+          Title
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer v-model="leftDrawerOpen" side="left" bordered>
+      <q-scroll-area class="fit">
+        <q-list>
+          <q-item clickable v-ripple>
+            <q-item-section>
+              <q-btn to="/">Home</q-btn>
+            </q-item-section>
+          </q-item>
+          <q-separator />
+          <q-item clickable v-ripple>
+            <q-item-section>
+              <q-btn to="/">My Bingo Cards</q-btn>
+            </q-item-section>
+          </q-item>
+          <q-item clickable v-ripple>
+            <q-item-section>
+              <q-btn to="/faq">FAQ</q-btn>
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
+    </q-drawer>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
+    <q-footer elevated class="bg-grey-8 text-white">
+      Created by PhyberApex
+    </q-footer>
+  </q-layout>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-</style>
