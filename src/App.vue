@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { RouterView, RouterLink } from "vue-router";
+import { RouterView } from "vue-router";
 import { ref } from "vue";
+import useBingoCard from "@/composables/useBingoCard";
+
 const leftDrawerOpen = ref(false);
 const toggleLeftDrawer = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 };
+const { myCards } = useBingoCard();
 </script>
 
 <template>
@@ -12,34 +15,41 @@ const toggleLeftDrawer = () => {
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
-
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          LobbyBinghoe
-        </q-toolbar-title>
+        <q-toolbar-title> LobbyBinghoe </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" side="left" bordered>
       <q-scroll-area class="fit">
         <q-list>
-          <q-item clickable v-ripple>
-            <q-item-section>
-              <q-btn to="/">Home</q-btn>
+          <q-item clickable v-ripple to="/">
+            <q-item-section avatar>
+              <q-icon name="home" />
             </q-item-section>
+            <q-item-section>Home</q-item-section>
           </q-item>
           <q-separator />
-          <q-item clickable v-ripple>
-            <q-item-section>
-              <q-btn to="/">My Bingo Cards</q-btn>
+          <div v-if="myCards.length > 0" class="text-subtitle2 q-px-md q-py-sm">
+            My Bingo Cards
+          </div>
+          <q-item
+            v-for="card in myCards"
+            :key="card.id"
+            clickable
+            v-ripple
+            :to="`/bingo/card/${card.id}`"
+          >
+            <q-item-section avatar>
+              <q-icon name="view_cozy" />
             </q-item-section>
+            <q-item-section>{{ card.episode_name }}</q-item-section>
           </q-item>
-          <q-item clickable v-ripple>
-            <q-item-section>
-              <q-btn to="/faq">FAQ</q-btn>
+          <q-separator />
+          <q-item clickable v-ripple to="/faq">
+            <q-item-section avatar>
+              <q-icon name="help" />
             </q-item-section>
+            <q-item-section>FAQ</q-item-section>
           </q-item>
         </q-list>
       </q-scroll-area>

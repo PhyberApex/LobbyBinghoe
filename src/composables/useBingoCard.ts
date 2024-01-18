@@ -1,4 +1,5 @@
 import { ref, readonly, computed } from "vue";
+import { useStorage } from "@vueuse/core";
 import validateBingoValues, {
   validateLobbyHoeBingo,
 } from "@/utils/validateBingoValues";
@@ -7,6 +8,8 @@ const defaultBingoValues = () =>
   Array(5)
     .fill(null)
     .map(() => Array(5).fill(false));
+
+const myCards = useStorage("my-cards", [], localStorage);
 
 export default () => {
   const loading = ref(false);
@@ -20,35 +23,45 @@ export default () => {
   const fetchCard = async (id: string) => {
     loading.value = true;
     try {
-        const response = await fetch(`/.netlify/functions/get-card-by-id?id=${id}`, {
+      const response = await fetch(
+        `/.netlify/functions/get-card-by-id?id=${id}`,
+        {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
-        });
-        if (!response.ok) {
-          // Handle non-200 responses
-          const contentType = response.headers.get('Content-Type');
-          let errorText;
-          if (contentType && contentType.includes('application/json')) {
-            // If response has JSON body, parse it
-            errorText = (await response.json()).error;
-          } else {
-            // If no JSON body, use status text
-            errorText = response.statusText;
-          }
-          throw new Error(`${response.status} (${errorText})`);
+        },
+      );
+      if (!response.ok) {
+        // Handle non-200 responses
+        const contentType = response.headers.get("Content-Type");
+        let errorText;
+        if (contentType && contentType.includes("application/json")) {
+          // If response has JSON body, parse it
+          errorText = (await response.json()).error;
+        } else {
+          // If no JSON body, use status text
+          errorText = response.statusText;
         }
-        const newCard = await response.json();
-        loading.value = false;
-        bingoCard.value = {
-            ...newCard,
-            bingoValues: defaultBingoValues()
-        };
-      } catch (error) {
-        loading.value = false;
-        throw error;
+        throw new Error(`${response.status} (${errorText})`);
       }
+      const newCard = await response.json();
+      loading.value = false;
+      bingoCard.value = {
+        ...newCard,
+        bingoValues: defaultBingoValues(),
+        isLocal: !!myCards.value.find((card) => card.id === newCard.id),
+      };
+    } catch (error) {
+      loading.value = false;
+      throw error;
+    }
+  };
+
+  const removeCardFromStorage = () => {
+    myCards.value = myCards.value.filter(
+      (card) => bingoCard.value.id !== card.id,
+    );
   };
 
   const lobbyHoeBingoFound = computed(() => {
@@ -74,6 +87,7 @@ export default () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const newCard = await response.json();
+      myCards.value = [...myCards.value, newCard];
       return newCard.id;
     } catch (error) {
       console.error("There was an error!", error);
@@ -88,5 +102,7 @@ export default () => {
     bingoFound,
     lobbyHoeBingoFound,
     createNewCard,
+    myCards,
+    removeCardFromStorage,
   };
 };

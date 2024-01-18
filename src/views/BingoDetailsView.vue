@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import useBingoCard from "@/composables/useBingoCard";
+import { useRouter } from "vue-router";
 
 const props = defineProps<{
   id: string;
 }>();
 
 const isError = ref(false);
-const errorText = ref('');
+const errorText = ref("");
+
+const router = useRouter();
 
 const {
   loading,
@@ -15,29 +18,34 @@ const {
   fetchCard,
   bingoFound,
   lobbyHoeBingoFound,
+  removeCardFromStorage,
 } = useBingoCard();
 
 onMounted(async () => {
   try {
-    await fetchCard(props.id)
-  }
-  catch (error) {
+    await fetchCard(props.id);
+  } catch (error) {
     isError.value = true;
     errorText.value = error;
   }
 });
 
+const removeCard = () => {
+  removeCardFromStorage();
+  router.push("/");
+};
+
 watch(
   () => props.id,
   async (newId) => {
-  try {
-    await fetchCard(newId)
-  }
-  catch (error) {
-    isError.value = true;
-    errorText.value = error;
-  }
-});
+    try {
+      await fetchCard(newId);
+    } catch (error) {
+      isError.value = true;
+      errorText.value = error;
+    }
+  },
+);
 
 const toggleField = (rowIndex: number, colIndex: number) => {
   if (bingoCard.value !== null)
@@ -52,9 +60,23 @@ const toggleField = (rowIndex: number, colIndex: number) => {
 
   <div v-else-if="!loading && bingoCard !== null">
     <q-card class="my-card">
-      <q-card-section>
-        <div class="text-center text-h6">{{ bingoCard?.episode }}</div>
-        <div class="text-center text-subtitle1">{{ bingoCard?.id }}</div>
+      <q-card-section class="q-pt-md q-pb-none q-px-md">
+        <div class="text-h6 text-center">{{ bingoCard?.episode }}</div>
+        <div class="text-subtitle1 text-center">{{ bingoCard?.id }}</div>
+        <div class="row justify-end">
+          <q-btn
+            v-if="bingoCard?.isLocal"
+            flat
+            icon="delete"
+            color="negative"
+            @click="removeCard"
+            class="q-mt-xs"
+          >
+            <q-tooltip> Remove this card from your history </q-tooltip></q-btn
+          >
+        </div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
         <div
           v-if="bingoFound"
           class="q-ma-md text-h5 text-center text-positive"
@@ -68,8 +90,8 @@ const toggleField = (rowIndex: number, colIndex: number) => {
           LobbyHoe-Bingo!
         </div>
         <q-separator></q-separator>
-        <div class="q-pa-md">
-          <div
+        <div class="grid-container">
+          <template
             v-for="(row, rowIndex) in bingoCard.bingoValues"
             :key="rowIndex"
             class="row q-gutter-md justify-center row-spacing"
@@ -83,7 +105,7 @@ const toggleField = (rowIndex: number, colIndex: number) => {
               rounded
               push
               @click="toggleField(rowIndex, colIndex)"
-              class="bingo-btn"
+              class="grid-item"
             >
               <span class="text-truncate">{{
                 bingoCard.bingoFacts[rowIndex][colIndex]
@@ -92,7 +114,7 @@ const toggleField = (rowIndex: number, colIndex: number) => {
                 {{ bingoCard.bingoFacts[rowIndex][colIndex] }}
               </q-tooltip>
             </q-btn>
-          </div>
+          </template>
         </div>
       </q-card-section>
     </q-card>
@@ -112,36 +134,23 @@ const toggleField = (rowIndex: number, colIndex: number) => {
 
 <style scoped>
 .my-card {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto; /* Centers the card on the page */
 }
 
-.row-spacing {
-  margin-bottom: 16px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px; /* Adjust the gap between items */
+  width: 100%;
+  max-width: 1000px; /* Adjust based on desired max width */
+  margin: 0 auto; /* Center the grid */
 }
 
-.bingo-btn {
-  width: calc(100% / 5 - 16px); /* Adjust the width dynamically */
-  min-width: 50px;
-  height: 120px; /* You might want to make this dynamic as well */
-  font-size: 12px;
-  padding: 0; /* Adjust padding if necessary */
-}
-
-/* Adjust button sizes and font for smaller screens */
-@media (max-width: 599px) {
-  .bingo-btn {
-    height: 50px; /* Smaller buttons on mobile */
-    font-size: 8px; /* Further reduce font size */
-  }
-
-  .text-truncate {
-    font-size: 8px; /* Smaller font size for text inside the button */
-    padding: 2px; /* Adjust padding */
-    max-height: 45px; /* Set a max height */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis to overflow text */
-  }
+.grid-item {
+  background-color: #f0f0f0; /* Example background color */
+  aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio */
 }
 
 /* Style for the Bingo Found label */
