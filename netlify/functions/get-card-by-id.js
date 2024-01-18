@@ -35,18 +35,22 @@ exports.handler = async (event, context) => {
       .eq('id', id);
 
     if (error) throw error;
-
-    if (data.lenght === 0){
+    if (data.length === 0){
       return {
         statusCode: 404,
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ error: "Card not found" })
       };
     }
-
+    console.log("HI")
     const fetchedCard = data[0];
-    console.log(fetchedCard);
     return {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         id: fetchedCard.id,
         episode: fetchedCard.episode_name,
@@ -56,6 +60,9 @@ exports.handler = async (event, context) => {
   } catch (error) {
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ error: error.message })
     };
   }

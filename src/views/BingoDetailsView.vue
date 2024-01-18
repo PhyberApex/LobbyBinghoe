@@ -6,22 +6,38 @@ const props = defineProps<{
   id: string;
 }>();
 
+const isError = ref(false);
+const errorText = ref('');
+
 const {
   loading,
-  isError,
-  errorText,
   bingoCard,
   fetchCard,
   bingoFound,
   lobbyHoeBingoFound,
 } = useBingoCard();
 
-onMounted(() => fetchCard(props.id));
+onMounted(async () => {
+  try {
+    await fetchCard(props.id)
+  }
+  catch (error) {
+    isError.value = true;
+    errorText.value = error;
+  }
+});
 
 watch(
   () => props.id,
-  (newId) => fetchCard(newId),
-);
+  async (newId) => {
+  try {
+    await fetchCard(newId)
+  }
+  catch (error) {
+    isError.value = true;
+    errorText.value = error;
+  }
+});
 
 const toggleField = (rowIndex: number, colIndex: number) => {
   if (bingoCard.value !== null)

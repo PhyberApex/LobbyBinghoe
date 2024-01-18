@@ -16,13 +16,6 @@ export default () => {
     bingoFacts: Array<Array<string>>;
     bingoValues: Array<Array<boolean>>;
   } | null>(null);
-  const errorText = ref("");
-  const isError = ref(false);
-
-  const setError = (newErrorText: string) => {
-    isError.value = true;
-    errorText.value = newErrorText;
-  };
 
   const fetchCard = async (id: string) => {
     loading.value = true;
@@ -34,7 +27,17 @@ export default () => {
           },
         });
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          // Handle non-200 responses
+          const contentType = response.headers.get('Content-Type');
+          let errorText;
+          if (contentType && contentType.includes('application/json')) {
+            // If response has JSON body, parse it
+            errorText = (await response.json()).error;
+          } else {
+            // If no JSON body, use status text
+            errorText = response.statusText;
+          }
+          throw new Error(`${response.status} (${errorText})`);
         }
         const newCard = await response.json();
         loading.value = false;
@@ -43,7 +46,6 @@ export default () => {
             bingoValues: defaultBingoValues()
         };
       } catch (error) {
-        console.error("There was an error!", error);
         loading.value = false;
         throw error;
       }
@@ -82,8 +84,6 @@ export default () => {
   return {
     loading: readonly(loading),
     bingoCard,
-    isError,
-    errorText,
     fetchCard,
     bingoFound,
     lobbyHoeBingoFound,
