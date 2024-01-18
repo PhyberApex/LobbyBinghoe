@@ -46,10 +46,6 @@ const exampleBingoFacts = [
   ],
 ];
 
-let exampleEpisodeName = "Test";
-
-const validID = "05b12b7a-47ad-4159-bd61-3652bc743bf4";
-
 export default () => {
   const loading = ref(false);
   const bingoCard = ref<{
@@ -68,22 +64,27 @@ export default () => {
 
   const fetchCard = async (id: string) => {
     loading.value = true;
-    return new Promise((resolve) =>
-      setTimeout(() => {
-        loading.value = false;
-        if (id === validID) {
-          bingoCard.value = {
-            id: validID,
-            episode: exampleEpisodeName,
-            bingoFacts: exampleBingoFacts,
-            bingoValues: defaultBingoValues(),
-          };
-          return;
+    try {
+        const response = await fetch(`/.netlify/functions/get-card-by-id?id=${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        setError("Card not found");
-        resolve(0);
-      }, 3000),
-    );
+        const newCard = await response.json();
+        loading.value = false;
+        bingoCard.value = {
+            ...newCard,
+            bingoValues: defaultBingoValues()
+        };
+      } catch (error) {
+        console.error("There was an error!", error);
+        loading.value = false;
+        throw error;
+      }
   };
 
   const lobbyHoeBingoFound = computed(() => {
@@ -96,9 +97,24 @@ export default () => {
     return validateBingoValues(bingoCard.value.bingoValues);
   });
 
-  const createNewCard = (episodeName: string): string => {
-    exampleEpisodeName = episodeName;
-    return validID;
+  const createNewCard = async (episodeName: string): Promise<string> => {
+    try {
+      const response = await fetch("/.netlify/functions/create-card", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ episodeName }),
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const newCard = await response.json();
+      return newCard.id;
+    } catch (error) {
+      console.error("There was an error!", error);
+      throw error;
+    }
   };
 
   return {

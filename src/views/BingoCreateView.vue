@@ -8,8 +8,8 @@ const router = useRouter();
 const episodeName = ref("");
 const { createNewCard } = useBingoCard();
 
-const createNew = () => {
-  const id = createNewCard(episodeName.value);
+const createNew = async () => {
+  const id = await createNewCard(episodeName.value);
   router.push(`card/${id}`);
 };
 </script>
