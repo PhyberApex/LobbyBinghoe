@@ -8,44 +8,6 @@ const defaultBingoValues = () =>
     .fill(null)
     .map(() => Array(5).fill(false));
 
-const exampleBingoFacts = [
-  [
-    "Ju wechselt plötzlich das Thema",
-    "Rezo sagt 'Spaaaaaaß'",
-    "Rezo lobt sich selbst",
-    "Ju lobt sich selbst",
-    "Ju sagt 'Spaaaaaaß'",
-  ],
-  [
-    "Ju stöhnt etwas, oder betont es unnötig sexual",
-    "Ju erwähnt Vagina / Vulva",
-    "Rezo erwähnt Vagina / Vulva",
-    "Ju erwähnt Penis",
-    "Rezo erwähnt Penis",
-  ],
-  [
-    "Rezo macht keinen Mathe-Fact",
-    "5-Sterne Bewertung wird erwähnt",
-    "Rezo anwortet mit 'Hää?'",
-    "Ju sagt was dummes, kurze Pause, beide lachen",
-    "Ju sagt 'Ach, Freunde!'",
-  ],
-  [
-    "Einer der beiden erwähnt das es sich um einen News Podcast handelt",
-    "Rezo erinnert Ju daran nicht zu viel zu versprechen",
-    "Rezo spricht ein 't' wie ein 'd' aus",
-    "Rezo sagt 'Weiiiiß ich jetzt nicht'",
-    "Ju wird auf Tinder angesprochen",
-  ],
-  [
-    "Geschlechtsverkehr wird erwähnt",
-    "Ein neues Intro wird erstellt / soll erstellt werden",
-    "Rezo versucht Ju einen Fuß-fetisch unter zu jubeln",
-    "Ju versucht Rezzo einen Muttermilch-fetisch unter zu jubeln",
-    "Einer der beiden hat angst vor Marina",
-  ],
-];
-
 export default () => {
   const loading = ref(false);
   const bingoCard = ref<{
