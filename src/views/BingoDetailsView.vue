@@ -90,31 +90,28 @@ const toggleField = (rowIndex: number, colIndex: number) => {
           LobbyHoe-Bingo!
         </div>
         <q-separator></q-separator>
-        <div class="grid-container">
-          <template
-            v-for="(row, rowIndex) in bingoCard.bingoValues"
-            :key="rowIndex"
-            class="row q-gutter-md justify-center row-spacing"
-          >
-            <q-btn
-              v-for="(field, colIndex) in row"
-              :key="colIndex"
-              :color="field ? 'positive' : 'dark'"
-              :text-color="field ? 'white' : 'grey-7'"
-              label=""
-              rounded
-              push
-              @click="toggleField(rowIndex, colIndex)"
-              class="grid-item"
-            >
-              <span class="text-truncate">{{
-                bingoCard.bingoFacts[rowIndex][colIndex]
-              }}</span>
-              <q-tooltip>
-                {{ bingoCard.bingoFacts[rowIndex][colIndex] }}
-              </q-tooltip>
-            </q-btn>
-          </template>
+        <div class="q-pa-md">
+          <div v-for="(row, rowIndex) in bingoCard.bingoValues"
+              :key="rowIndex" class="row">
+                <q-btn
+                  :key="colIndex"
+                  :color="field ? 'positive' : 'dark'"
+                  :text-color="field ? 'white' : 'grey-7'"
+                  label=""
+                  rounded
+                  push
+                  v-for="(field, colIndex) in row" 
+                  @click="toggleField(rowIndex, colIndex)"
+                  class="square-btn"
+                >
+                  <span class="text-truncate">{{
+                    bingoCard.bingoFacts[rowIndex][colIndex]
+                  }}</span>
+                  <q-tooltip>
+                    {{ bingoCard.bingoFacts[rowIndex][colIndex] }}
+                  </q-tooltip>
+                </q-btn>
+          </div>
         </div>
       </q-card-section>
     </q-card>
@@ -138,19 +135,14 @@ const toggleField = (rowIndex: number, colIndex: number) => {
   margin: 0 auto; /* Centers the card on the page */
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 8px; /* Adjust the gap between items */
-  width: 100%;
-  max-width: 1000px; /* Adjust based on desired max width */
-  margin: 0 auto; /* Center the grid */
+.row {
+  width: 500px;
 }
 
-.grid-item {
-  background-color: #f0f0f0; /* Example background color */
-  aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio */
+.square-btn {
+  aspect-ratio: 1 / 1;
+  height: 100px;
+  width: 100px; /* Ensure it fills the parent column */
 }
 
 /* Style for the Bingo Found label */
