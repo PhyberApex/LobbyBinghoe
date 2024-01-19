@@ -6,7 +6,7 @@ import useBingoCard from "@/composables/useBingoCard";
 const router = useRouter();
 
 const episodeName = ref("");
-const { createNewCard } = useBingoCard();
+const { createNewCard, loading } = useBingoCard();
 
 const createNew = async () => {
   const id = await createNewCard(episodeName.value);
@@ -30,6 +30,7 @@ const createNew = async () => {
           color="primary"
           label="Create"
           class="full-width"
+          :loading="loading"
           @click="createNew"
         ></q-btn>
       </q-card-section>

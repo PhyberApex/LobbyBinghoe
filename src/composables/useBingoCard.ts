@@ -84,6 +84,7 @@ export default () => {
   });
 
   const createNewCard = async (episodeName: string): Promise<string> => {
+    loading.value = true;
     try {
       const response = await fetch("/.netlify/functions/create-card", {
         method: "POST",
@@ -97,9 +98,10 @@ export default () => {
       }
       const newCard = await response.json();
       myCards.value = [...myCards.value, newCard];
+      loading.value = false;
       return newCard.id;
     } catch (error) {
-      console.error("There was an error!", error);
+      loading.value = false;
       throw error;
     }
   };
