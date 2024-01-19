@@ -9,7 +9,14 @@ const defaultBingoValues = () =>
     .fill(null)
     .map(() => Array(5).fill(false));
 
-const myCards = useStorage("my-cards", [], localStorage);
+const myCards = useStorage(
+  "my-cards",
+  [] as {
+    id: string;
+    episode_name: string;
+  }[],
+  localStorage,
+);
 
 export default () => {
   const loading = ref(false);
@@ -18,6 +25,7 @@ export default () => {
     episode: string;
     bingoFacts: Array<Array<string>>;
     bingoValues: Array<Array<boolean>>;
+    isLocal: boolean;
   } | null>(null);
 
   const fetchCard = async (id: string) => {
@@ -59,9 +67,10 @@ export default () => {
   };
 
   const removeCardFromStorage = () => {
-    myCards.value = myCards.value.filter(
-      (card) => bingoCard.value.id !== card.id,
-    );
+    if (bingoCard.value === null) return;
+
+    const bingoCardId = bingoCard.value.id;
+    myCards.value = myCards.value.filter((card) => bingoCardId !== card.id);
   };
 
   const lobbyHoeBingoFound = computed(() => {

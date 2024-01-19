@@ -26,7 +26,13 @@ onMounted(async () => {
     await fetchCard(props.id);
   } catch (error) {
     isError.value = true;
-    errorText.value = error;
+    if (error instanceof Error) {
+      // If it's an instance of Error, use the message property
+      errorText.value = error.message;
+    } else {
+      // If it's not an Error object, default to a standard error message
+      errorText.value = "An unexpected error occurred";
+    }
   }
 });
 
@@ -42,7 +48,13 @@ watch(
       await fetchCard(newId);
     } catch (error) {
       isError.value = true;
-      errorText.value = error;
+      if (error instanceof Error) {
+        // If it's an instance of Error, use the message property
+        errorText.value = error.message;
+      } else {
+        // If it's not an Error object, default to a standard error message
+        errorText.value = "An unexpected error occurred";
+      }
     }
   },
 );
@@ -91,26 +103,29 @@ const toggleField = (rowIndex: number, colIndex: number) => {
         </div>
         <q-separator></q-separator>
         <div class="q-pa-md">
-          <div v-for="(row, rowIndex) in bingoCard.bingoValues"
-              :key="rowIndex" class="row">
-                <q-btn
-                  :key="colIndex"
-                  :color="field ? 'positive' : 'dark'"
-                  :text-color="field ? 'white' : 'grey-7'"
-                  label=""
-                  rounded
-                  push
-                  v-for="(field, colIndex) in row" 
-                  @click="toggleField(rowIndex, colIndex)"
-                  class="square-btn"
-                >
-                  <span class="text-truncate">{{
-                    bingoCard.bingoFacts[rowIndex][colIndex]
-                  }}</span>
-                  <q-tooltip>
-                    {{ bingoCard.bingoFacts[rowIndex][colIndex] }}
-                  </q-tooltip>
-                </q-btn>
+          <div
+            v-for="(row, rowIndex) in bingoCard.bingoValues"
+            :key="rowIndex"
+            class="row"
+          >
+            <q-btn
+              :key="colIndex"
+              :color="field ? 'positive' : 'dark'"
+              :text-color="field ? 'white' : 'grey-7'"
+              label=""
+              rounded
+              push
+              v-for="(field, colIndex) in row"
+              @click="toggleField(rowIndex, colIndex)"
+              class="square-btn"
+            >
+              <span class="text-truncate">{{
+                bingoCard.bingoFacts[rowIndex][colIndex]
+              }}</span>
+              <q-tooltip>
+                {{ bingoCard.bingoFacts[rowIndex][colIndex] }}
+              </q-tooltip>
+            </q-btn>
           </div>
         </div>
       </q-card-section>
