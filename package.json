@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.12",
-    "@supabase/supabase-js": "^2.39.3",
+    "@supabase/supabase-js": "^2.45.3",
     "@vueuse/core": "^11.0.1",
     "quasar": "^2.14.2",
     "vue": "^3.3.11",
