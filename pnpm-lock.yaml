@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@quasar/vite-plugin':
         specifier: 1.7.0
-        version: 1.7.0(@vitejs/plugin-vue@4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2)))(quasar@2.14.2)(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2))
+        version: 1.7.0(@vitejs/plugin-vue@4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2)))(quasar@2.14.2)(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2))
       '@rushstack/eslint-patch':
         specifier: 1.10.4
         version: 1.10.4
@@ -44,7 +44,7 @@ importers:
         version: 22.7.0
       '@vitejs/plugin-vue':
         specifier: 4.5.2
-        version: 4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2))
+        version: 4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2))
       '@vue/eslint-config-prettier':
         specifier: 9.0.0
         version: 9.0.0(eslint@8.49.0)(prettier@3.0.3)
@@ -79,8 +79,8 @@ importers:
         specifier: 3.0.3
         version: 3.0.3
       sass:
-        specifier: 1.69.7
-        version: 1.69.7
+        specifier: 1.79.3
+        version: 1.79.3
       start-server-and-test:
         specifier: 2.0.3
         version: 2.0.3
@@ -89,10 +89,10 @@ importers:
         version: 5.6.2
       vite:
         specifier: 5.4.7
-        version: 5.4.7(@types/node@22.7.0)(sass@1.69.7)
+        version: 5.4.7(@types/node@22.7.0)(sass@1.79.3)
       vitest:
         specifier: 1.0.4
-        version: 1.0.4(@types/node@22.7.0)(jsdom@25.0.1)(sass@1.69.7)
+        version: 1.0.4(@types/node@22.7.0)(jsdom@25.0.1)(sass@1.79.3)
       vue-tsc:
         specifier: 2.1.6
         version: 2.1.6(typescript@5.6.2)
@@ -741,10 +741,6 @@ packages:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
     engines: {node: '>=12'}
 
-  anymatch@3.1.3:
-    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
-    engines: {node: '>= 8'}
-
   arch@2.2.0:
     resolution: {integrity: sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==}
 
@@ -799,10 +795,6 @@ packages:
 
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
-
-  binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
-    engines: {node: '>=8'}
 
   blob-util@2.0.2:
     resolution: {integrity: sha512-T7JQa+zsXXEa6/8ZhHcQEW1UFfVM49Ts65uBkFL6fz2QmrElqmbajIDJvuA0tEhRe5eIjpV9ZF+0RfZR9voJFQ==}
@@ -862,9 +854,9 @@ packages:
     resolution: {integrity: sha512-Pj779qHxV2tuapviy1bSZNEL1maXr13bPYpsvSDB68HlYcYuhlDrmGd63i0JHMCLKzc7rUSNIrpdJlhVlNwrxA==}
     engines: {node: '>= 0.8.0'}
 
-  chokidar@3.5.3:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
-    engines: {node: '>= 8.10.0'}
+  chokidar@4.0.1:
+    resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
+    engines: {node: '>= 14.16.0'}
 
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
@@ -1391,10 +1383,6 @@ packages:
     resolution: {integrity: sha512-7PnF4oN3CvZF23ADhA5wRaYEQpJ8qygSkbtTXWBeXWXmEVRXK+1ITciHWwHhsjv1TmW0MgacIv6hEi5pX5NQdA==}
     engines: {node: '>=10'}
 
-  is-binary-path@2.1.0:
-    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
-    engines: {node: '>=8'}
-
   is-ci@3.0.1:
     resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
     hasBin: true
@@ -1638,10 +1626,6 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     hasBin: true
 
-  normalize-path@3.0.0:
-    resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
-    engines: {node: '>=0.10.0'}
-
   npm-normalize-package-bin@3.0.1:
     resolution: {integrity: sha512-dMxCf+zZ+3zeQZXKxmyuCKlIDPGuv8EF940xbkC4kQVDTtqoh6rJFO+JTKSA6/Rwi0getWmtuy4Itup0AMcaDQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -1848,9 +1832,9 @@ packages:
     resolution: {integrity: sha512-0J+Msgym3vrLOUB3hzQCuZHII0xkNGCtz/HJH9xZshwv9DbDwkw1KaE3gx/e2J5rpEY5rtOy6cyhKOPrkP7FZw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  readdirp@3.6.0:
-    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
-    engines: {node: '>=8.10.0'}
+  readdirp@4.0.1:
+    resolution: {integrity: sha512-GkMg9uOTpIWWKbSsgwb5fA4EavTR+SG/PMPoAY8hkhHfEEY0/vqljY+XHqtDf2cr2IJtoNRDbrrEpZUiZCkYRw==}
+    engines: {node: '>= 14.16.0'}
 
   request-progress@3.0.0:
     resolution: {integrity: sha512-MnWzEHHaxHO2iWiQuHrUPBi/1WeBf5PkxQqNyNvLl9VAYSdXkP8tQ3pBSeCPD+yw0v0Aq1zosWLz0BdeXpWwZg==}
@@ -1898,8 +1882,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.69.7:
-    resolution: {integrity: sha512-rzj2soDeZ8wtE2egyLXgOOHQvaC2iosZrkF6v3EUG+tBwEvhqUCzm0VP3k9gHF9LXbSrRhT5SksoI56Iw8NPnQ==}
+  sass@1.79.3:
+    resolution: {integrity: sha512-m7dZxh0W9EZ3cw50Me5GOuYm/tVAJAn91SUnohLRo9cXBixGUOdvmryN+dXpwR831bhoY3Zv7rEFt85PUwTmzA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2540,11 +2524,11 @@ snapshots:
 
   '@quasar/extras@1.16.12': {}
 
-  '@quasar/vite-plugin@1.7.0(@vitejs/plugin-vue@4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2)))(quasar@2.14.2)(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2))':
+  '@quasar/vite-plugin@1.7.0(@vitejs/plugin-vue@4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2)))(quasar@2.14.2)(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2))':
     dependencies:
-      '@vitejs/plugin-vue': 4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2))
+      '@vitejs/plugin-vue': 4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2))
       quasar: 2.14.2
-      vite: 5.4.7(@types/node@22.7.0)(sass@1.69.7)
+      vite: 5.4.7(@types/node@22.7.0)(sass@1.79.3)
       vue: 3.3.11(typescript@5.6.2)
 
   '@rollup/rollup-android-arm-eabi@4.22.4':
@@ -2772,9 +2756,9 @@ snapshots:
       '@typescript-eslint/types': 6.19.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-vue@4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.69.7))(vue@3.3.11(typescript@5.6.2))':
+  '@vitejs/plugin-vue@4.5.2(vite@5.4.7(@types/node@22.7.0)(sass@1.79.3))(vue@3.3.11(typescript@5.6.2))':
     dependencies:
-      vite: 5.4.7(@types/node@22.7.0)(sass@1.69.7)
+      vite: 5.4.7(@types/node@22.7.0)(sass@1.79.3)
       vue: 3.3.11(typescript@5.6.2)
 
   '@vitest/expect@1.0.4':
@@ -3006,11 +2990,6 @@ snapshots:
 
   ansi-styles@6.2.1: {}
 
-  anymatch@3.1.3:
-    dependencies:
-      normalize-path: 3.0.0
-      picomatch: 2.3.1
-
   arch@2.2.0: {}
 
   arg@5.0.2: {}
@@ -3054,8 +3033,6 @@ snapshots:
   bcrypt-pbkdf@1.0.2:
     dependencies:
       tweetnacl: 0.14.5
-
-  binary-extensions@2.2.0: {}
 
   blob-util@2.0.2: {}
 
@@ -3118,17 +3095,9 @@ snapshots:
 
   check-more-types@2.24.0: {}
 
-  chokidar@3.5.3:
+  chokidar@4.0.1:
     dependencies:
-      anymatch: 3.1.3
-      braces: 3.0.3
-      glob-parent: 5.1.2
-      is-binary-path: 2.1.0
-      is-glob: 4.0.3
-      normalize-path: 3.0.0
-      readdirp: 3.6.0
-    optionalDependencies:
-      fsevents: 2.3.3
+      readdirp: 4.0.1
 
   ci-info@3.9.0: {}
 
@@ -3754,10 +3723,6 @@ snapshots:
 
   ini@2.0.0: {}
 
-  is-binary-path@2.1.0:
-    dependencies:
-      binary-extensions: 2.2.0
-
   is-ci@3.0.1:
     dependencies:
       ci-info: 3.9.0
@@ -3998,8 +3963,6 @@ snapshots:
     dependencies:
       abbrev: 2.0.0
 
-  normalize-path@3.0.0: {}
-
   npm-normalize-package-bin@3.0.1: {}
 
   npm-run-all2@6.2.2:
@@ -4183,9 +4146,7 @@ snapshots:
       json-parse-even-better-errors: 3.0.2
       npm-normalize-package-bin: 3.0.1
 
-  readdirp@3.6.0:
-    dependencies:
-      picomatch: 2.3.1
+  readdirp@4.0.1: {}
 
   request-progress@3.0.0:
     dependencies:
@@ -4244,9 +4205,9 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.69.7:
+  sass@1.79.3:
     dependencies:
-      chokidar: 3.5.3
+      chokidar: 4.0.1
       immutable: 4.3.4
       source-map-js: 1.2.1
 
@@ -4480,13 +4441,13 @@ snapshots:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  vite-node@1.0.4(@types/node@22.7.0)(sass@1.69.7):
+  vite-node@1.0.4(@types/node@22.7.0)(sass@1.79.3):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.1.0
-      vite: 5.4.7(@types/node@22.7.0)(sass@1.69.7)
+      vite: 5.4.7(@types/node@22.7.0)(sass@1.79.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4498,7 +4459,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.4.7(@types/node@22.7.0)(sass@1.69.7):
+  vite@5.4.7(@types/node@22.7.0)(sass@1.79.3):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
@@ -4506,9 +4467,9 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.7.0
       fsevents: 2.3.3
-      sass: 1.69.7
+      sass: 1.79.3
 
-  vitest@1.0.4(@types/node@22.7.0)(jsdom@25.0.1)(sass@1.69.7):
+  vitest@1.0.4(@types/node@22.7.0)(jsdom@25.0.1)(sass@1.79.3):
     dependencies:
       '@vitest/expect': 1.0.4
       '@vitest/runner': 1.0.4
@@ -4528,8 +4489,8 @@ snapshots:
       strip-literal: 1.3.0
       tinybench: 2.6.0
       tinypool: 0.8.1
-      vite: 5.4.7(@types/node@22.7.0)(sass@1.69.7)
-      vite-node: 1.0.4(@types/node@22.7.0)(sass@1.69.7)
+      vite: 5.4.7(@types/node@22.7.0)(sass@1.79.3)
+      vite-node: 1.0.4(@types/node@22.7.0)(sass@1.79.3)
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@types/node': 22.7.0
