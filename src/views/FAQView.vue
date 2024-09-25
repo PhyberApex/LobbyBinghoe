@@ -1,12 +1,11 @@
 <template>
   <q-page class="q-pa-md">
     <div class="text-h5 q-pb-md">Frequently Asked Questions</div>
-
     <q-expansion-item
-      v-for="(faq, index) in faqs"
-      :key="index"
-      :label="faq.question"
-      class="q-mb-md"
+        v-for="(faq, index) in faqs"
+        :key="index"
+        :label="faq.question"
+        class="q-mb-md"
     >
       <template v-slot:default>
         <p>{{ faq.answer }}</p>
@@ -22,21 +21,29 @@ export default {
     return {
       faqs: [
         {
-          question: "What is Quasar Framework?",
-          answer:
-            "Quasar is a Vue.js based framework, which allows you as a web developer to quickly craft responsive websites/apps in many flavors.",
+          question: "What is LobbyBinghoe?",
+          answer: "LobbyBinghoe is a bingo web application designed specifically for fans of the German podcast 'Hobbylos' by Rezo and Julien Bäm. It adds an interactive element to your podcast listening experience.",
         },
         {
-          question: "How to install Quasar?",
-          answer:
-            "You can install Quasar using the Quasar CLI or by adding it to a Vue project via Vue CLI.",
+          question: "How do I play LobbyBinghoe?",
+          answer: "To play, simply listen to the 'Hobbylos' podcast and mark off items on your bingo card as they come up during the show. The goal is to get a bingo by completing a row, column, or diagonal on your card.",
         },
         {
-          question: "Can Quasar be used for mobile apps?",
-          answer:
-            "Yes, Quasar is designed to build apps for both web and mobile platforms using the same codebase.",
+          question: "Do I need to create an account to play?",
+          answer: "Currently, LobbyBinghoe does not require user accounts. Your bingo card information is stored locally in your browser.",
         },
-        // Add more FAQs here
+        {
+          question: "How are my bingo cards saved?",
+          answer: "Your bingo card IDs are saved in your browser's local storage. This means they will persist between sessions on the same device, but won't be available if you switch to a different device or browser.",
+        },
+        {
+          question: "Is LobbyBinghoe available on mobile devices?",
+          answer: "Yes, LobbyBinghoe is designed to be responsive and should work well on both desktop and mobile browsers.",
+        },
+        {
+          question: "Who are LobbyHoes?",
+          answer: "LobbyHoes is the affectionate term used for listeners of the 'Hobbylos' podcast by Rezo and Julien Bäm.",
+        },
       ],
     };
   },
