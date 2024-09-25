@@ -34,8 +34,8 @@ importers:
         specifier: 1.10.4
         version: 1.10.4
       '@tsconfig/node18':
-        specifier: 18.2.2
-        version: 18.2.2
+        specifier: 18.2.4
+        version: 18.2.4
       '@types/jsdom':
         specifier: 21.1.6
         version: 21.1.6
@@ -482,8 +482,8 @@ packages:
   '@supabase/supabase-js@2.45.4':
     resolution: {integrity: sha512-E5p8/zOLaQ3a462MZnmnz03CrduA5ySH9hZyL03Y+QZLIOO4/Gs8Rdy4ZCKDHsN7x0xdanVEWWFN3pJFQr9/hg==}
 
-  '@tsconfig/node18@18.2.2':
-    resolution: {integrity: sha512-d6McJeGsuoRlwWZmVIeE8CUA27lu6jLjvv1JzqmpsytOYYbVi1tHZEnwCNVOXnj4pyLvneZlFlpXUK+X9wBWyw==}
+  '@tsconfig/node18@18.2.4':
+    resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -2618,7 +2618,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@tsconfig/node18@18.2.2': {}
+  '@tsconfig/node18@18.2.4': {}
 
   '@types/estree@1.0.5': {}
 
