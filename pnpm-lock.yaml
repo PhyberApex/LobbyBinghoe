@@ -49,8 +49,8 @@ importers:
         specifier: 10.0.0
         version: 10.0.0(eslint@9.12.0)(prettier@3.3.3)
       '@vue/eslint-config-typescript':
-        specifier: 14.0.1
-        version: 14.0.1(eslint-plugin-vue@9.29.0(eslint@9.12.0))(eslint@9.12.0)(typescript@5.6.3)
+        specifier: 14.1.1
+        version: 14.1.1(@typescript-eslint/parser@8.8.1(eslint@9.12.0)(typescript@5.6.3))(eslint-plugin-vue@9.29.0(eslint@9.12.0))(eslint@9.12.0)(typescript@5.6.3)
       '@vue/test-utils':
         specifier: 2.4.6
         version: 2.4.6
@@ -729,8 +729,8 @@ packages:
       eslint: '>= 8.21.0'
       prettier: '>= 3.0.0'
 
-  '@vue/eslint-config-typescript@14.0.1':
-    resolution: {integrity: sha512-jE5myCG9OiXQOuTSiwCqmM5ktGuiL/xI2SC1DUf+AntvFTDOW5+RZtGKw8L+Af5jlSe0k45RNVh0a/wklcckGQ==}
+  '@vue/eslint-config-typescript@14.1.1':
+    resolution: {integrity: sha512-zw6q8pXUuFHfdZsdKYr344giBRhnq6WmWSO2abFHajxR8wDX2p2hkj0/Mf6W2phTkerU4b8WF2jgq2Z/c+PdMA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -2964,17 +2964,18 @@ snapshots:
     transitivePeerDependencies:
       - '@types/eslint'
 
-  '@vue/eslint-config-typescript@14.0.1(eslint-plugin-vue@9.29.0(eslint@9.12.0))(eslint@9.12.0)(typescript@5.6.3)':
+  '@vue/eslint-config-typescript@14.1.1(@typescript-eslint/parser@8.8.1(eslint@9.12.0)(typescript@5.6.3))(eslint-plugin-vue@9.29.0(eslint@9.12.0))(eslint@9.12.0)(typescript@5.6.3)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 8.8.1(@typescript-eslint/parser@8.8.1(eslint@9.12.0)(typescript@5.6.3))(eslint@9.12.0)(typescript@5.6.3)
-      '@typescript-eslint/parser': 8.8.1(eslint@9.12.0)(typescript@5.6.3)
       eslint: 9.12.0
       eslint-plugin-vue: 9.29.0(eslint@9.12.0)
+      fast-glob: 3.3.2
       typescript-eslint: 8.8.1(eslint@9.12.0)(typescript@5.6.3)
       vue-eslint-parser: 9.4.3(eslint@9.12.0)
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
+      - '@typescript-eslint/parser'
       - supports-color
 
   '@vue/language-core@2.1.6(typescript@5.6.3)':
