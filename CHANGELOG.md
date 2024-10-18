@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.1](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.2.0...v1.2.1) (2024-10-18)
+
+
+### Bug Fixes
+
+* Update dependency @supabase/supabase-js to v2.45.5 ([#98](https://github.com/PhyberApex/LobbyBinghoe/issues/98)) ([9a37122](https://github.com/PhyberApex/LobbyBinghoe/commit/9a371227d1530497c563fc2e57f733ce46e4e303))
+* Update dependency @types/node to v22.7.6 ([#96](https://github.com/PhyberApex/LobbyBinghoe/issues/96)) ([1fba9b2](https://github.com/PhyberApex/LobbyBinghoe/commit/1fba9b23f6e8607a92c207f1b91a54ec89a9176d))
+* Update dependency npm-run-all2 to v6.2.4 ([#99](https://github.com/PhyberApex/LobbyBinghoe/issues/99)) ([9af797a](https://github.com/PhyberApex/LobbyBinghoe/commit/9af797a3fd02e48087a054875a570612204c20d9))
+* Update dependency sass to v1.80.2 ([#97](https://github.com/PhyberApex/LobbyBinghoe/issues/97)) ([9bfb592](https://github.com/PhyberApex/LobbyBinghoe/commit/9bfb59254ce2aef0162785dec21ebe9ca55fc84e))
+
 ## [1.2.0](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.1.0...v1.2.0) (2024-10-16)
 
 
