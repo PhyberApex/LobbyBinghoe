@@ -4,6 +4,8 @@
     "config:recommended"
   ],
   "commitMessagePrefix": "fix:",
+  "automerge": true,
+  "platformAutomerge": true,
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
