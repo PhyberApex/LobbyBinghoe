@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.2.1...v1.2.2) (2024-10-24)
+
+
+### Bug Fixes
+
+* Update dependency cypress to v13.15.1 ([#118](https://github.com/PhyberApex/LobbyBinghoe/issues/118)) ([9a64790](https://github.com/PhyberApex/LobbyBinghoe/commit/9a64790fa0a526f4f8f45cc16134a91c5a831dcd))
+
 ## [1.2.1](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.2.0...v1.2.1) (2024-10-24)
 
 
