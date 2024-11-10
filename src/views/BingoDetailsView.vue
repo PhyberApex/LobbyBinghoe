@@ -65,7 +65,6 @@ const removeCard = () => {
   $q.dialog({
     title: 'Confirm Removal',
     message: 'Are you sure you want to remove this card from your history?',
-    cancel: true,
     persistent: true,
     color: 'negative',
     ok: {
@@ -110,7 +109,7 @@ const referenceItems = computed(() => {
         text,
         rowIndex,
         colIndex,
-        selected: bingoCard.value.bingoValues[rowIndex][colIndex]
+        selected: bingoCard?.value?.bingoValues[rowIndex][colIndex]
       }))
   );
 });

@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { ref } from 'vue';
-import BingoDetailsView from './BingoDetailsView.vue';
+import BingoDetailsView from '../BingoDetailsView.vue';
 import { useRouter } from 'vue-router';
 
 // Mock the router
@@ -34,7 +34,7 @@ vi.mock('@/composables/useBingoCard', () => ({
 }))
 
 describe('BingoDetailsView.vue', () => {
-  let wrapper;
+  let wrapper: ReturnType<typeof mount>;
 
   beforeEach(() => {
     // Reset all mocks before each test

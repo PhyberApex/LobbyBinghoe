@@ -4,7 +4,7 @@ import {computed, ref} from 'vue';
 interface FAQ {
   question: string;
   answer: string;
-  category?: string;
+  category: string;
   icon?: string;
 }
 
@@ -60,6 +60,7 @@ const filteredFaqs = computed(() => {
   if (!searchQuery.value) return faqs;
   const query = searchQuery.value.toLowerCase();
   return faqs.filter(faq =>
+      faq.category.toLowerCase().includes(query) ||
       faq.question.toLowerCase().includes(query) ||
       faq.answer.toLowerCase().includes(query)
   );
