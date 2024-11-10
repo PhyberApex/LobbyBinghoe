@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.3.0...v1.4.0) (2024-11-10)
+
+
+### Features
+
+* Restyle of the app with more interactivity and user guidance ([9690818](https://github.com/PhyberApex/LobbyBinghoe/commit/96908188b61f6ca0d97d65108fe4ee28af137b87))
+
+
+### Bug Fixes
+
+* Type errors ([5d243d0](https://github.com/PhyberApex/LobbyBinghoe/commit/5d243d06d99d934f2df386e61859c917c43f13cf))
+
 ## [1.3.0](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.2.1...v1.3.0) (2024-11-09)
 
 
