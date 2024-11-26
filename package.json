@@ -41,7 +41,7 @@
     "prettier": "3.3.3",
     "sass": "1.81.0",
     "start-server-and-test": "2.0.8",
-    "typescript": "latest",
+    "typescript": "5.6.3",
     "vite": "5.4.11",
     "vitest": "2.1.5",
     "vue-tsc": "2.1.6"
