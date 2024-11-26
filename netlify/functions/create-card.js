@@ -1,4 +1,4 @@
-const { createClient } = require('@supabase/supabase-js');
+import { createClient } from '@supabase/supabase-js';
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -7,23 +7,23 @@ function shuffleArray(array) {
     }
     return array;
   }
-  
+
   function fillArray(data) {
     const gridSize = 5;
     let result = [];
     let shuffledData = shuffleArray([...data]);
-  
+
     for (let i = 0; i < gridSize; i++) {
       result[i] = [];
       for (let j = 0; j < gridSize; j++) {
         result[i][j] = shuffledData[(i * gridSize + j) % shuffledData.length];
       }
     }
-  
+
     return result;
   }
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
 
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {

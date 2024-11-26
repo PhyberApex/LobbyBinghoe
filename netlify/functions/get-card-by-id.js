@@ -1,10 +1,10 @@
-const { createClient } = require('@supabase/supabase-js');
+import { createClient } from '@supabase/supabase-js';
 
 const v4 = new RegExp(
   /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,
 );
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
 
   // Only allow POST requests
   if (event.httpMethod !== 'GET') {
