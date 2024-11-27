@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.4.1](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.4.0...v1.4.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* Fix netlify functions and add required dependency ([27d34be](https://github.com/PhyberApex/LobbyBinghoe/commit/27d34be0e3a0cbb7e195b353b9e1149cc3578546))
+* Set a fixed version of TypeScript ([7e99913](https://github.com/PhyberApex/LobbyBinghoe/commit/7e99913481a8960f1be94cac8f8b8e884b0e2f50))
+* Update dependency @types/node to v22.10.0 ([#163](https://github.com/PhyberApex/LobbyBinghoe/issues/163)) ([a974c19](https://github.com/PhyberApex/LobbyBinghoe/commit/a974c19b90bcff8cf4b4a5c5d0d2b50378d732d6))
+* Update dependency @types/node to v22.9.1 ([#159](https://github.com/PhyberApex/LobbyBinghoe/issues/159)) ([d702b58](https://github.com/PhyberApex/LobbyBinghoe/commit/d702b58f0f808709d6cf4a2bdd8d7fff7cc7a47a))
+* Update dependency @vitejs/plugin-vue to v5.2.0 ([#145](https://github.com/PhyberApex/LobbyBinghoe/issues/145)) ([db8cb10](https://github.com/PhyberApex/LobbyBinghoe/commit/db8cb1083dc32ef795e52026bb91c288abbc8a06))
+* Update dependency @vitejs/plugin-vue to v5.2.1 ([#169](https://github.com/PhyberApex/LobbyBinghoe/issues/169)) ([7f96bf4](https://github.com/PhyberApex/LobbyBinghoe/commit/7f96bf4e2705bacfc7487a0c4afb1cd0a75ed6fd))
+* Update dependency @vue/eslint-config-typescript to v14.1.4 ([#164](https://github.com/PhyberApex/LobbyBinghoe/issues/164)) ([5ce4c81](https://github.com/PhyberApex/LobbyBinghoe/commit/5ce4c81bc3a20ec6adadbc576fd5b4c3493fde18))
+* Update dependency @vue/tsconfig to v0.6.0 ([#142](https://github.com/PhyberApex/LobbyBinghoe/issues/142)) ([54360d6](https://github.com/PhyberApex/LobbyBinghoe/commit/54360d649993f73aaac90ef674d96a322a7e48b3))
+* Update dependency @vueuse/core to v11.3.0 ([#162](https://github.com/PhyberApex/LobbyBinghoe/issues/162)) ([fce81de](https://github.com/PhyberApex/LobbyBinghoe/commit/fce81ded8589f47ccd2c78a2db1d178b60ad89e1))
+* Update dependency @vueuse/core to v12 ([#172](https://github.com/PhyberApex/LobbyBinghoe/issues/172)) ([946bf62](https://github.com/PhyberApex/LobbyBinghoe/commit/946bf628501b3183802ea2231b11f630c774508b))
+* Update dependency eslint to v9.15.0 ([#155](https://github.com/PhyberApex/LobbyBinghoe/issues/155)) ([badd23e](https://github.com/PhyberApex/LobbyBinghoe/commit/badd23e6b4657817a6f346b98703ff41061d5a36))
+* Update dependency eslint-plugin-vue to v9.31.0 ([#147](https://github.com/PhyberApex/LobbyBinghoe/issues/147)) ([929ed04](https://github.com/PhyberApex/LobbyBinghoe/commit/929ed04bf80195634acf002ed1f56c07520ac7f3))
+* Update dependency prettier to v3.4.0 ([#166](https://github.com/PhyberApex/LobbyBinghoe/issues/166)) ([6502e0c](https://github.com/PhyberApex/LobbyBinghoe/commit/6502e0c7824579de1f19b8c88a64e2ec19dff680))
+* Update dependency prettier to v3.4.1 ([#170](https://github.com/PhyberApex/LobbyBinghoe/issues/170)) ([aff477b](https://github.com/PhyberApex/LobbyBinghoe/commit/aff477b7dc430a640e2f84351e88852c32e542dc))
+* Update dependency quasar to v2.17.3 ([#156](https://github.com/PhyberApex/LobbyBinghoe/issues/156)) ([2a9e97a](https://github.com/PhyberApex/LobbyBinghoe/commit/2a9e97ac684c4fc502d831033182c3f73d848b0e))
+* Update dependency quasar to v2.17.4 ([#158](https://github.com/PhyberApex/LobbyBinghoe/issues/158)) ([80c044c](https://github.com/PhyberApex/LobbyBinghoe/commit/80c044c8c91f6af115ca7fc6fb1e7c8719804901))
+* Update dependency sass to v1.80.7 ([#148](https://github.com/PhyberApex/LobbyBinghoe/issues/148)) ([48444ba](https://github.com/PhyberApex/LobbyBinghoe/commit/48444ba0b8a0c8a93f2022e76712e824d8743f7a))
+* Update dependency sass to v1.81.0 ([#153](https://github.com/PhyberApex/LobbyBinghoe/issues/153)) ([bbfce4e](https://github.com/PhyberApex/LobbyBinghoe/commit/bbfce4e4206e7fe55c56d3445649aa6dfb6db5e4))
+* Update dependency vite to v5.4.11 ([#146](https://github.com/PhyberApex/LobbyBinghoe/issues/146)) ([bebe26f](https://github.com/PhyberApex/LobbyBinghoe/commit/bebe26ff71c8253f403281c707a45ee8ee3c73de))
+* Update dependency vitest to v2.1.5 ([#149](https://github.com/PhyberApex/LobbyBinghoe/issues/149)) ([adfa386](https://github.com/PhyberApex/LobbyBinghoe/commit/adfa386782c5e87e60929ea545469badf7fc01a8))
+* Update dependency vitest to v2.1.6 ([#171](https://github.com/PhyberApex/LobbyBinghoe/issues/171)) ([0ee0af9](https://github.com/PhyberApex/LobbyBinghoe/commit/0ee0af9b05743f5307116ea290b6100293643360))
+* Update dependency vue to v3.5.13 ([#154](https://github.com/PhyberApex/LobbyBinghoe/issues/154)) ([eb99f5e](https://github.com/PhyberApex/LobbyBinghoe/commit/eb99f5e7302d3cd142e45290e50e9a952d4ee4e8))
+* Update dependency vue-router to v4.5.0 ([#165](https://github.com/PhyberApex/LobbyBinghoe/issues/165)) ([77b7fe2](https://github.com/PhyberApex/LobbyBinghoe/commit/77b7fe26032dfe0f067f0b85ec3933af4bbcdcd7))
+* Update dependency vue-tsc to v2.1.10 ([#122](https://github.com/PhyberApex/LobbyBinghoe/issues/122)) ([91f9fc8](https://github.com/PhyberApex/LobbyBinghoe/commit/91f9fc8c2265b4ccda9567428161e92788e7022c))
+* Update pnpm to v9.13.0 ([#150](https://github.com/PhyberApex/LobbyBinghoe/issues/150)) ([6c482ce](https://github.com/PhyberApex/LobbyBinghoe/commit/6c482ce92e0896553f85268537eb70c460227091))
+* Update pnpm to v9.13.1 ([#151](https://github.com/PhyberApex/LobbyBinghoe/issues/151)) ([a616ab2](https://github.com/PhyberApex/LobbyBinghoe/commit/a616ab242e8a2228197b14fcf75ce357c2082227))
+* Update pnpm to v9.13.2 ([#152](https://github.com/PhyberApex/LobbyBinghoe/issues/152)) ([0c3d249](https://github.com/PhyberApex/LobbyBinghoe/commit/0c3d2495a5d0be3f93b65c3a473475a65ae2124e))
+* Update pnpm to v9.14.1 ([#160](https://github.com/PhyberApex/LobbyBinghoe/issues/160)) ([404c26c](https://github.com/PhyberApex/LobbyBinghoe/commit/404c26c09bd59888b0e2fae7b6c207b748fa941f))
+* Update pnpm to v9.14.2 ([#161](https://github.com/PhyberApex/LobbyBinghoe/issues/161)) ([7b2ae9a](https://github.com/PhyberApex/LobbyBinghoe/commit/7b2ae9a8f65a1d9980c1345cc58e80a0fc4a31bf))
+
 ## [1.4.0](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.3.0...v1.4.0) (2024-11-10)
 
 
