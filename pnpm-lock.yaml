@@ -13,7 +13,7 @@ importers:
         version: 1.16.14
       '@supabase/auth-js':
         specifier: ^2.66.0
-        version: 2.66.0
+        version: 2.66.1
       '@supabase/supabase-js':
         specifier: 2.46.2
         version: 2.46.2
@@ -531,8 +531,8 @@ packages:
   '@supabase/auth-js@2.65.1':
     resolution: {integrity: sha512-IA7i2Xq2SWNCNMKxwmPlHafBQda0qtnFr8QnyyBr+KaSxoXXqEzFCnQ1dGTy6bsZjVBgXu++o3qrDypTspaAPw==}
 
-  '@supabase/auth-js@2.66.0':
-    resolution: {integrity: sha512-Cx+17ULXcSq/dNhwh1Qcr6tc2cwjgEMrsio5L8F5YXTEHjLfV7Ucgs+eOp/GdB3dIvO2ACHLHrWBj2F2xG8DjA==}
+  '@supabase/auth-js@2.66.1':
+    resolution: {integrity: sha512-kOW+04SuDXmP2jRX9JL1Rgzduj8BcOG1qC3RaWdZsxnv89svNCdLRv8PfXW3QPKJdw0k1jF30OlQDPkzbDEL9w==}
 
   '@supabase/functions-js@2.4.3':
     resolution: {integrity: sha512-sOLXy+mWRyu4LLv1onYydq+10mNRQ4rzqQxNhbrKLTLTcdcmS9hbWif0bGz/NavmiQfPs4ZcmQJp4WqOXlR4AQ==}
@@ -2215,7 +2215,7 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/auth-js@2.66.0':
+  '@supabase/auth-js@2.66.1':
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
