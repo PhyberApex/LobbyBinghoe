@@ -15,8 +15,8 @@ importers:
         specifier: ^2.66.0
         version: 2.66.1
       '@supabase/supabase-js':
-        specifier: 2.47.1
-        version: 2.47.1
+        specifier: 2.47.2
+        version: 2.47.2
       '@vueuse/core':
         specifier: 12.0.0
         version: 12.0.0(typescript@5.6.3)
@@ -528,9 +528,6 @@ packages:
   '@sideway/pinpoint@2.0.0':
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
-  '@supabase/auth-js@2.65.1':
-    resolution: {integrity: sha512-IA7i2Xq2SWNCNMKxwmPlHafBQda0qtnFr8QnyyBr+KaSxoXXqEzFCnQ1dGTy6bsZjVBgXu++o3qrDypTspaAPw==}
-
   '@supabase/auth-js@2.66.1':
     resolution: {integrity: sha512-kOW+04SuDXmP2jRX9JL1Rgzduj8BcOG1qC3RaWdZsxnv89svNCdLRv8PfXW3QPKJdw0k1jF30OlQDPkzbDEL9w==}
 
@@ -550,8 +547,8 @@ packages:
   '@supabase/storage-js@2.7.1':
     resolution: {integrity: sha512-asYHcyDR1fKqrMpytAS1zjyEfvxuOIp1CIXX7ji4lHHcJKqyk+sLl/Vxgm4sN6u8zvuUtae9e4kDxQP2qrwWBA==}
 
-  '@supabase/supabase-js@2.47.1':
-    resolution: {integrity: sha512-Q5zBX3BhK4tIFE6W8TK7NP29G9XCX8nzMydHONI8e/6HjYnKmUyNf33rsTTwGVVlXz2ruzJKO+EX4wuwD21Q4g==}
+  '@supabase/supabase-js@2.47.2':
+    resolution: {integrity: sha512-BdP5hY29eCROJRV61WCM+OzcTSjaSzZe0H+2l88tOwmTG+1XqCiVYtZnUNIh12V8g5gdmQL5urp1pSYARbl38A==}
 
   '@tsconfig/node18@18.2.4':
     resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
@@ -2211,10 +2208,6 @@ snapshots:
 
   '@sideway/pinpoint@2.0.0': {}
 
-  '@supabase/auth-js@2.65.1':
-    dependencies:
-      '@supabase/node-fetch': 2.6.15
-
   '@supabase/auth-js@2.66.1':
     dependencies:
       '@supabase/node-fetch': 2.6.15
@@ -2245,9 +2238,9 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/supabase-js@2.47.1':
+  '@supabase/supabase-js@2.47.2':
     dependencies:
-      '@supabase/auth-js': 2.65.1
+      '@supabase/auth-js': 2.66.1
       '@supabase/functions-js': 2.4.3
       '@supabase/node-fetch': 2.6.15
       '@supabase/postgrest-js': 1.16.3
