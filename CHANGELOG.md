@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.1](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.5.0...v1.5.1) (2025-01-04)
+
+
+### Bug Fixes
+
+* Update dependency @types/node to v22.10.3 ([#215](https://github.com/PhyberApex/LobbyBinghoe/issues/215)) ([d3404b0](https://github.com/PhyberApex/LobbyBinghoe/commit/d3404b0247c34a18e6e1e2f2bb2c6c69b3f767b3))
+* Update dependency @types/node to v22.10.4 ([#218](https://github.com/PhyberApex/LobbyBinghoe/issues/218)) ([0109c2a](https://github.com/PhyberApex/LobbyBinghoe/commit/0109c2a9a1425eaa8c8c4464d637499b44290464))
+* Update dependency @types/node to v22.10.5 ([#220](https://github.com/PhyberApex/LobbyBinghoe/issues/220)) ([734e6fc](https://github.com/PhyberApex/LobbyBinghoe/commit/734e6fc80b6ac2365d92698e1c11615ed1cc1af3))
+* Update dependency @vueuse/core to v12.3.0 ([#217](https://github.com/PhyberApex/LobbyBinghoe/issues/217)) ([c7f3d62](https://github.com/PhyberApex/LobbyBinghoe/commit/c7f3d6266c21b9812100e028bc8fc2f2c5d421f3))
+* Update dependency quasar to v2.17.6 ([#221](https://github.com/PhyberApex/LobbyBinghoe/issues/221)) ([0c20a20](https://github.com/PhyberApex/LobbyBinghoe/commit/0c20a20bdca0f5957db6ea5cf0accbb5f616623b))
+* Update dependency sass to v1.83.1 ([#222](https://github.com/PhyberApex/LobbyBinghoe/issues/222)) ([dbfc792](https://github.com/PhyberApex/LobbyBinghoe/commit/dbfc7922ff6cc52fe7d1d9a7acd867f1bbc0733e))
+* Update dependency vite to v6.0.7 ([#219](https://github.com/PhyberApex/LobbyBinghoe/issues/219)) ([b887e25](https://github.com/PhyberApex/LobbyBinghoe/commit/b887e25cd9eefc8bd67b6197b4d7438aec68c0d5))
+
 ## [1.5.0](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.4.1...v1.5.0) (2024-12-30)
 
 
