@@ -15,8 +15,8 @@ importers:
         specifier: ^2.66.0
         version: 2.67.3
       '@supabase/supabase-js':
-        specifier: 2.47.12
-        version: 2.47.12
+        specifier: 2.47.13
+        version: 2.47.13
       '@vueuse/core':
         specifier: 12.4.0
         version: 12.4.0(typescript@5.7.3)
@@ -823,8 +823,8 @@ packages:
   '@supabase/storage-js@2.7.1':
     resolution: {integrity: sha512-asYHcyDR1fKqrMpytAS1zjyEfvxuOIp1CIXX7ji4lHHcJKqyk+sLl/Vxgm4sN6u8zvuUtae9e4kDxQP2qrwWBA==}
 
-  '@supabase/supabase-js@2.47.12':
-    resolution: {integrity: sha512-My8X5K1KwOBFjQhAqIf7QJaQhP5EILjJwAgjzRNjstlMLJmdVBctwRYD6IGDWKzw+i6/aNGuRd5c9/pI/Y6UFw==}
+  '@supabase/supabase-js@2.47.13':
+    resolution: {integrity: sha512-yhzJIyCGLhtbvFvOgyuugW2PN3mQKtio/fCmX2MV3YgokRAGziQvzsVWqKfj0R4gfjfHwlzYmXgGpGKp42RhGQ==}
 
   '@tsconfig/node18@18.2.4':
     resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
@@ -2724,7 +2724,7 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/supabase-js@2.47.12':
+  '@supabase/supabase-js@2.47.13':
     dependencies:
       '@supabase/auth-js': 2.67.3
       '@supabase/functions-js': 2.4.4
