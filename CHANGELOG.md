@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.5.1](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.5.0...v1.5.1) (2025-01-19)
+
+
+### Bug Fixes
+
+* Update dependency @quasar/vite-plugin to v1.9.0 ([#238](https://github.com/PhyberApex/LobbyBinghoe/issues/238)) ([3faedc7](https://github.com/PhyberApex/LobbyBinghoe/commit/3faedc7a990d13d8910875b42ac4c160ac3019b4))
+* Update dependency @rushstack/eslint-patch to v1.10.5 ([#224](https://github.com/PhyberApex/LobbyBinghoe/issues/224)) ([c48803b](https://github.com/PhyberApex/LobbyBinghoe/commit/c48803b0e6511dde4fd279fc23b48052648236e4))
+* Update dependency @supabase/supabase-js to v2.47.11 ([#225](https://github.com/PhyberApex/LobbyBinghoe/issues/225)) ([4cf264e](https://github.com/PhyberApex/LobbyBinghoe/commit/4cf264e8a2be299f0f1757f9e00cf8205dbe4f98))
+* Update dependency @supabase/supabase-js to v2.47.12 ([#226](https://github.com/PhyberApex/LobbyBinghoe/issues/226)) ([febe3a3](https://github.com/PhyberApex/LobbyBinghoe/commit/febe3a3cff117fc727fe0d250aac5449dadc1d10))
+* Update dependency @supabase/supabase-js to v2.47.13 ([#234](https://github.com/PhyberApex/LobbyBinghoe/issues/234)) ([d517f6e](https://github.com/PhyberApex/LobbyBinghoe/commit/d517f6e80a36d8c88648dc036229ae66d5ca61de))
+* Update dependency @supabase/supabase-js to v2.47.14 ([#237](https://github.com/PhyberApex/LobbyBinghoe/issues/237)) ([60aae26](https://github.com/PhyberApex/LobbyBinghoe/commit/60aae264aeb82c0ff350b9175d0090024d3ca9e1))
+* Update dependency @supabase/supabase-js to v2.47.16 ([#240](https://github.com/PhyberApex/LobbyBinghoe/issues/240)) ([3329a09](https://github.com/PhyberApex/LobbyBinghoe/commit/3329a09092e9c4d30617843b7954cbfd4b1dee42))
+* Update dependency @types/node to v22.10.3 ([#215](https://github.com/PhyberApex/LobbyBinghoe/issues/215)) ([d3404b0](https://github.com/PhyberApex/LobbyBinghoe/commit/d3404b0247c34a18e6e1e2f2bb2c6c69b3f767b3))
+* Update dependency @types/node to v22.10.4 ([#218](https://github.com/PhyberApex/LobbyBinghoe/issues/218)) ([0109c2a](https://github.com/PhyberApex/LobbyBinghoe/commit/0109c2a9a1425eaa8c8c4464d637499b44290464))
+* Update dependency @types/node to v22.10.5 ([#220](https://github.com/PhyberApex/LobbyBinghoe/issues/220)) ([734e6fc](https://github.com/PhyberApex/LobbyBinghoe/commit/734e6fc80b6ac2365d92698e1c11615ed1cc1af3))
+* Update dependency @types/node to v22.10.6 ([#231](https://github.com/PhyberApex/LobbyBinghoe/issues/231)) ([0ee56ba](https://github.com/PhyberApex/LobbyBinghoe/commit/0ee56baa7950125be9b9a8724551f1a8bcb26a53))
+* Update dependency @types/node to v22.10.7 ([#239](https://github.com/PhyberApex/LobbyBinghoe/issues/239)) ([36f455d](https://github.com/PhyberApex/LobbyBinghoe/commit/36f455d3d017ec56e9d040b93d70011d167fb271))
+* Update dependency @vue/eslint-config-typescript to v14.3.0 ([#236](https://github.com/PhyberApex/LobbyBinghoe/issues/236)) ([70c35cc](https://github.com/PhyberApex/LobbyBinghoe/commit/70c35cc7766e17ce104ef16f8d88ec58a756826c))
+* Update dependency @vueuse/core to v12.3.0 ([#217](https://github.com/PhyberApex/LobbyBinghoe/issues/217)) ([c7f3d62](https://github.com/PhyberApex/LobbyBinghoe/commit/c7f3d6266c21b9812100e028bc8fc2f2c5d421f3))
+* Update dependency @vueuse/core to v12.4.0 ([#229](https://github.com/PhyberApex/LobbyBinghoe/issues/229)) ([e91f0ea](https://github.com/PhyberApex/LobbyBinghoe/commit/e91f0eaf24fbd0eb47f6ddf5fa14cbd757026842))
+* Update dependency eslint to v9.18.0 ([#230](https://github.com/PhyberApex/LobbyBinghoe/issues/230)) ([ac8c4f8](https://github.com/PhyberApex/LobbyBinghoe/commit/ac8c4f8398a5495938c0904f7f2390367a17f497))
+* Update dependency jsdom to v26 ([#228](https://github.com/PhyberApex/LobbyBinghoe/issues/228)) ([0daa68e](https://github.com/PhyberApex/LobbyBinghoe/commit/0daa68efe37074d689bd87c58242a21b8470d409))
+* Update dependency quasar to v2.17.6 ([#221](https://github.com/PhyberApex/LobbyBinghoe/issues/221)) ([0c20a20](https://github.com/PhyberApex/LobbyBinghoe/commit/0c20a20bdca0f5957db6ea5cf0accbb5f616623b))
+* Update dependency sass to v1.83.1 ([#222](https://github.com/PhyberApex/LobbyBinghoe/issues/222)) ([dbfc792](https://github.com/PhyberApex/LobbyBinghoe/commit/dbfc7922ff6cc52fe7d1d9a7acd867f1bbc0733e))
+* Update dependency sass to v1.83.4 ([#233](https://github.com/PhyberApex/LobbyBinghoe/issues/233)) ([6a09ee1](https://github.com/PhyberApex/LobbyBinghoe/commit/6a09ee1235a63032761600956228725ab3e8de56))
+* Update dependency start-server-and-test to v2.0.10 ([#235](https://github.com/PhyberApex/LobbyBinghoe/issues/235)) ([44568ab](https://github.com/PhyberApex/LobbyBinghoe/commit/44568ab7ac7f8463710dd76d3c94d48ee360283d))
+* Update dependency typescript to v5.7.3 ([#227](https://github.com/PhyberApex/LobbyBinghoe/issues/227)) ([5e6eb03](https://github.com/PhyberApex/LobbyBinghoe/commit/5e6eb036d59c9fcb1d89c340c00d0c0190ff93b3))
+* Update dependency vite to v6.0.7 ([#219](https://github.com/PhyberApex/LobbyBinghoe/issues/219)) ([b887e25](https://github.com/PhyberApex/LobbyBinghoe/commit/b887e25cd9eefc8bd67b6197b4d7438aec68c0d5))
+* Update pnpm to v9.15.3 ([#223](https://github.com/PhyberApex/LobbyBinghoe/issues/223)) ([002f0b7](https://github.com/PhyberApex/LobbyBinghoe/commit/002f0b7221f1db44ff885c4a6994d8655a05a9a2))
+* Update pnpm to v9.15.4 ([#232](https://github.com/PhyberApex/LobbyBinghoe/issues/232)) ([cf03540](https://github.com/PhyberApex/LobbyBinghoe/commit/cf035407c1b7d63f591ec79b00c8f401681e9cf8))
+
 ## [1.5.0](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.4.1...v1.5.0) (2024-12-30)
 
 
