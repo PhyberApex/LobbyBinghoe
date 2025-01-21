@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@quasar/extras':
-        specifier: 1.16.15
-        version: 1.16.15
+        specifier: 1.16.16
+        version: 1.16.16
       '@supabase/auth-js':
         specifier: ^2.66.0
         version: 2.67.3
@@ -467,8 +467,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@quasar/extras@1.16.15':
-    resolution: {integrity: sha512-ZM8rUAagZ3Gm7Thu6DjKdGfkyFBv61RaCeVSIWdve6+q300yN+6aouxttf2RmxCk12RsSqEyzBnIg7BlF1s7MA==}
+  '@quasar/extras@1.16.16':
+    resolution: {integrity: sha512-aswGUbEyLvt45KB1u6hBD3s82KnOdkqTn6YVu3xX5aGgwQkCWPyqb3FMTEHG+4+gGTMp4pIcnng96RlqswQctQ==}
 
   '@quasar/vite-plugin@1.9.0':
     resolution: {integrity: sha512-r1MFtI2QZJ2g20pe75Zuv4aoi0uoK8oP0yEdzLWRoOLCbhtf2+StJpUza9TydYi3KcvCl9+4HUf3OAWVKoxDmQ==}
@@ -2222,7 +2222,7 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@quasar/extras@1.16.15': {}
+  '@quasar/extras@1.16.16': {}
 
   '@quasar/vite-plugin@1.9.0(@vitejs/plugin-vue@5.2.1(vite@6.0.11(@types/node@22.10.7)(sass@1.83.4))(vue@3.5.13(typescript@5.7.3)))(quasar@2.17.7)(vite@6.0.11(@types/node@22.10.7)(sass@1.83.4))(vue@3.5.13(typescript@5.7.3))':
     dependencies:
