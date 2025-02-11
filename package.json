@@ -15,7 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@quasar/extras": "1.16.16",
+    "@quasar/extras": "1.16.17",
     "@supabase/auth-js": "^2.66.0",
     "@supabase/supabase-js": "2.48.1",
     "@vueuse/core": "12.5.0",
