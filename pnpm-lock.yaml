@@ -34,8 +34,8 @@ importers:
         specifier: 1.9.0
         version: 1.9.0(@vitejs/plugin-vue@5.2.1(vite@6.2.1(@types/node@22.13.10)(sass@1.85.1))(vue@3.5.13(typescript@5.8.2)))(quasar@2.18.1)(vite@6.2.1(@types/node@22.13.10)(sass@1.85.1))(vue@3.5.13(typescript@5.8.2))
       '@rushstack/eslint-patch':
-        specifier: 1.10.5
-        version: 1.10.5
+        specifier: 1.11.0
+        version: 1.11.0
       '@tsconfig/node18':
         specifier: 18.2.4
         version: 18.2.4
@@ -578,8 +578,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rushstack/eslint-patch@1.10.5':
-    resolution: {integrity: sha512-kkKUDVlII2DQiKy7UstOR1ErJP8kUKAQ4oa+SQtM0K+lPdmmjj0YnnxBgtTVYH7mUKtbsxeFC9y0AmK7Yb78/A==}
+  '@rushstack/eslint-patch@1.11.0':
+    resolution: {integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -2291,7 +2291,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.34.3':
     optional: true
 
-  '@rushstack/eslint-patch@1.10.5': {}
+  '@rushstack/eslint-patch@1.11.0': {}
 
   '@sideway/address@4.1.5':
     dependencies:
