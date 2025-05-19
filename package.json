@@ -17,7 +17,7 @@
   "dependencies": {
     "@quasar/extras": "1.16.17",
     "@supabase/auth-js": "^2.66.0",
-    "@supabase/supabase-js": "2.49.4",
+    "@supabase/supabase-js": "2.49.5",
     "@vueuse/core": "13.2.0",
     "quasar": "2.18.1",
     "vue": "3.5.14",
