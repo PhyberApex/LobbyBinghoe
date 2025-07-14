@@ -15,8 +15,8 @@ importers:
         specifier: ^2.66.0
         version: 2.71.0
       '@supabase/supabase-js':
-        specifier: 2.50.5
-        version: 2.50.5
+        specifier: 2.51.0
+        version: 2.51.0
       '@vueuse/core':
         specifier: 13.5.0
         version: 13.5.0(vue@3.5.17(typescript@5.8.3))
@@ -607,9 +607,6 @@ packages:
   '@sideway/pinpoint@2.0.0':
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
-  '@supabase/auth-js@2.70.0':
-    resolution: {integrity: sha512-BaAK/tOAZFJtzF1sE3gJ2FwTjLf4ky3PSvcvLGEgEmO4BSBkwWKu8l67rLLIBZPDnCyV7Owk2uPyKHa0kj5QGg==}
-
   '@supabase/auth-js@2.71.0':
     resolution: {integrity: sha512-OMYNbhGa1Cj4stalJq0VoHm5l7Sj/xY0j9CiYEQCikbQmtiDG3c27EIFA4OD+NxuoHTZmjaW8VJlS3SP+yasEA==}
 
@@ -629,8 +626,8 @@ packages:
   '@supabase/storage-js@2.7.1':
     resolution: {integrity: sha512-asYHcyDR1fKqrMpytAS1zjyEfvxuOIp1CIXX7ji4lHHcJKqyk+sLl/Vxgm4sN6u8zvuUtae9e4kDxQP2qrwWBA==}
 
-  '@supabase/supabase-js@2.50.5':
-    resolution: {integrity: sha512-FgBFYJ/nsBBN1o4qmQpx1ouupht256FCxNM6r5YTgwGbOVopODzP2xhZPu2ecXdmU4CxTS5/KiGf5j2l3ACozQ==}
+  '@supabase/supabase-js@2.51.0':
+    resolution: {integrity: sha512-jG70XoNFcX3z0h/No0t1Aoc3zoHPtMQk5zaM5v3+sCJ/v5Z3qyoHYkGIg1JUycINPsuuAASZ4ZS43YO6H5wMoA==}
 
   '@tsconfig/node18@18.2.4':
     resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
@@ -2389,10 +2386,6 @@ snapshots:
 
   '@sideway/pinpoint@2.0.0': {}
 
-  '@supabase/auth-js@2.70.0':
-    dependencies:
-      '@supabase/node-fetch': 2.6.15
-
   '@supabase/auth-js@2.71.0':
     dependencies:
       '@supabase/node-fetch': 2.6.15
@@ -2424,9 +2417,9 @@ snapshots:
     dependencies:
       '@supabase/node-fetch': 2.6.15
 
-  '@supabase/supabase-js@2.50.5':
+  '@supabase/supabase-js@2.51.0':
     dependencies:
-      '@supabase/auth-js': 2.70.0
+      '@supabase/auth-js': 2.71.0
       '@supabase/functions-js': 2.4.5
       '@supabase/node-fetch': 2.6.15
       '@supabase/postgrest-js': 1.19.4
