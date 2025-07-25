@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.5.3](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.5.2...v1.5.3) (2025-07-25)
+
+
+### Bug Fixes
+
+* Update dependency @supabase/supabase-js to v2.52.1 ([#477](https://github.com/PhyberApex/LobbyBinghoe/issues/477)) ([511cba2](https://github.com/PhyberApex/LobbyBinghoe/commit/511cba235c2043bdc688f82c0280c90e9581d85c))
+* Update dependency eslint to v9.32.0 ([#480](https://github.com/PhyberApex/LobbyBinghoe/issues/480)) ([6bfe170](https://github.com/PhyberApex/LobbyBinghoe/commit/6bfe170d0577c1c851ddccf7b9e538b4fa8660e3))
+* Update dependency vite to v7.0.6 ([#478](https://github.com/PhyberApex/LobbyBinghoe/issues/478)) ([0dc543c](https://github.com/PhyberApex/LobbyBinghoe/commit/0dc543cc33b7eb9507966c1948fdfd20aaf37c3d))
+* Update dependency vue to v3.5.18 ([#475](https://github.com/PhyberApex/LobbyBinghoe/issues/475)) ([e410ffc](https://github.com/PhyberApex/LobbyBinghoe/commit/e410ffc1fb9b77a57401b529e76565386d2dd95e))
+* Update dependency vue-tsc to v3.0.4 ([#479](https://github.com/PhyberApex/LobbyBinghoe/issues/479)) ([4a32c6b](https://github.com/PhyberApex/LobbyBinghoe/commit/4a32c6b63b52af1612ff52c937e4b0249a6bc0f6))
+
 ## [1.5.2](https://github.com/PhyberApex/LobbyBinghoe/compare/v1.5.1...v1.5.2) (2025-07-21)
 
 
