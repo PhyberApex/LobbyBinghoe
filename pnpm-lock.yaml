@@ -34,8 +34,8 @@ importers:
         specifier: 1.10.0
         version: 1.10.0(@vitejs/plugin-vue@5.2.4(vite@7.1.12(@types/node@22.18.12)(sass@1.93.2))(vue@3.5.22(typescript@5.9.3)))(quasar@2.18.5)(vite@7.1.12(@types/node@22.18.12)(sass@1.93.2))(vue@3.5.22(typescript@5.9.3))
       '@rushstack/eslint-patch':
-        specifier: 1.14.0
-        version: 1.14.0
+        specifier: 1.14.1
+        version: 1.14.1
       '@tsconfig/node18':
         specifier: 18.2.4
         version: 18.2.4
@@ -609,8 +609,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rushstack/eslint-patch@1.14.0':
-    resolution: {integrity: sha512-WJFej426qe4RWOm9MMtP4V3CV4AucXolQty+GRgAWLgQXmpCuwzs7hEpxxhSc/znXUSxum9d/P/32MW0FlAAlA==}
+  '@rushstack/eslint-patch@1.14.1':
+    resolution: {integrity: sha512-jGTk8UD/RdjsNZW8qq10r0RBvxL8OWtoT+kImlzPDFilmozzM+9QmIJsmze9UiSBrFU45ZxhTYBypn9q9z/VfQ==}
 
   '@standard-schema/spec@1.0.0':
     resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
@@ -2413,7 +2413,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.46.2':
     optional: true
 
-  '@rushstack/eslint-patch@1.14.0': {}
+  '@rushstack/eslint-patch@1.14.1': {}
 
   '@standard-schema/spec@1.0.0': {}
 
