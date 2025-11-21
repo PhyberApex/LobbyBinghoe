@@ -37,8 +37,8 @@ importers:
         specifier: 1.14.1
         version: 1.14.1
       '@tsconfig/node18':
-        specifier: 18.2.4
-        version: 18.2.4
+        specifier: 18.2.6
+        version: 18.2.6
       '@types/jsdom':
         specifier: 27.0.0
         version: 27.0.0
@@ -650,8 +650,8 @@ packages:
   '@supabase/supabase-js@2.77.0':
     resolution: {integrity: sha512-s6OQ8RZ0ioQCwVDh2Tv502XaUQCuRbbjpujYJB1h0JWELRsqjLDsgB5kZUkETPgtTAjJk7z97YPUsRg80PohfA==}
 
-  '@tsconfig/node18@18.2.4':
-    resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
+  '@tsconfig/node18@18.2.6':
+    resolution: {integrity: sha512-eAWQzAjPj18tKnDzmWstz4OyWewLUNBm9tdoN9LayzoboRktYx3Enk1ZXPmThj55L7c4VWYq/Bzq0A51znZfhw==}
 
   '@types/chai@5.2.2':
     resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
@@ -2500,7 +2500,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@tsconfig/node18@18.2.4': {}
+  '@tsconfig/node18@18.2.6': {}
 
   '@types/chai@5.2.2':
     dependencies:
