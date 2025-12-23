@@ -73,6 +73,7 @@ describe('BingoDetailsView.vue', () => {
 
   it('toggles field when clicking grid button', async () => {
     const button = wrapper.findAll('.square-btn')[0];
+    if (!button) throw new Error('Button not found')
     await button.trigger('click');
 
     expect(mockUseBingoCard().bingoCard.value.bingoValues[0][0]).toBe(true);
@@ -80,6 +81,7 @@ describe('BingoDetailsView.vue', () => {
 
   it('toggles field when clicking reference item', async () => {
     const referenceItem = wrapper.findAll('.reference-list .q-item')[0];
+      if (!referenceItem) throw new Error('ReferenceItem not found')
     await referenceItem.trigger('click');
 
     expect(mockUseBingoCard().bingoCard.value.bingoValues[0][0]).toBe(true);
@@ -169,6 +171,8 @@ describe('BingoDetailsView.vue', () => {
     const selectedButton = testWrapper.findAll('.square-btn')[0];
     const selectedReference = testWrapper.findAll('.reference-list .q-item')[0];
 
+    if (!selectedButton) throw new Error('Button not found')
+    if (!selectedReference) throw new Error('SelectedReference not found')
     expect(selectedButton.classes()).toContain('text-white');
     expect(selectedReference.classes()).toContain('bg-positive');
   });

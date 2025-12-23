@@ -8,17 +8,17 @@ export default (bingoValues: Array<Array<boolean>>): boolean => {
 
     for (
       let columnIndex = 0;
-      columnIndex < bingoValues[rowIndex].length;
+      columnIndex < bingoValues[rowIndex]!.length;
       columnIndex++
     ) {
       // Check each row and column
-      if (!bingoValues[rowIndex][columnIndex]) bingoFoundInRow = false;
-      if (!bingoValues[columnIndex][rowIndex]) bingoFoundInColumn = false;
+      if (!bingoValues[rowIndex]![columnIndex]) bingoFoundInRow = false;
+      if (!bingoValues[columnIndex]![rowIndex]) bingoFoundInColumn = false;
     }
 
     // Check diagonals
-    if (!bingoValues[rowIndex][rowIndex]) bingoFoundInDiag1 = false;
-    if (!bingoValues[rowIndex][bingoValues.length - 1 - rowIndex])
+    if (!bingoValues[rowIndex]![rowIndex]) bingoFoundInDiag1 = false;
+    if (!bingoValues[rowIndex]![bingoValues.length - 1 - rowIndex])
       bingoFoundInDiag2 = false;
 
     // Check if any row or column has bingo
@@ -49,7 +49,7 @@ export function validateLobbyHoeBingo(
   ];
   let found = true;
   lobbyHoeSymbolLayout.forEach((coordinate) => {
-    if (!bingoValues[coordinate[0]][coordinate[1]]) found = false;
+    if (!bingoValues[(coordinate[0] ?? 0)]![(coordinate[1] ?? 0)]) found = false;
   });
   return found;
 }

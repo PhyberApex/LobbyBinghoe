@@ -92,7 +92,7 @@ watch(() => props.id, async (newId) => {
 
 const toggleField = (rowIndex: number, colIndex: number) => {
   if (bingoCard.value !== null) {
-    bingoCard.value.bingoValues[rowIndex][colIndex] = !bingoCard.value.bingoValues[rowIndex][colIndex];
+    bingoCard.value.bingoValues[rowIndex]![colIndex] = !bingoCard.value.bingoValues[rowIndex]![colIndex];
   }
 };
 
@@ -109,7 +109,7 @@ const referenceItems = computed(() => {
         text,
         rowIndex,
         colIndex,
-        selected: bingoCard?.value?.bingoValues[rowIndex][colIndex]
+        selected: bingoCard?.value?.bingoValues[rowIndex]![colIndex]
       }))
   );
 });
