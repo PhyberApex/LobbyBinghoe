@@ -64,8 +64,8 @@ importers:
         specifier: 10.1.0
         version: 10.1.0
       eslint-plugin-cypress:
-        specifier: 6.2.1
-        version: 6.2.1(eslint@10.1.0)
+        specifier: 6.2.2
+        version: 6.2.2(eslint@10.1.0)
       eslint-plugin-vue:
         specifier: 10.8.0
         version: 10.8.0(@typescript-eslint/parser@8.56.0(eslint@10.1.0)(typescript@5.9.3))(eslint@10.1.0)(vue-eslint-parser@10.4.0(eslint@10.1.0))
@@ -1194,8 +1194,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@6.2.1:
-    resolution: {integrity: sha512-pbjvNE2GKG3hlerT3SIQcRnsMfzFnpAyg0V17D+Gm/a18cxBOVLUxWWANAs7LzykdTPn+SKgzczhF0+IODFs7w==}
+  eslint-plugin-cypress@6.2.2:
+    resolution: {integrity: sha512-lOhmMWb5/+zv28EaDOT7C3lgGgWL8DMZglTUNUaaGfleK89joDBRXX8LV01ygx3dK1RbvG54b8t025/5QEUKgg==}
     peerDependencies:
       eslint: '>=9'
 
@@ -1388,8 +1388,8 @@ packages:
     deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
-  globals@17.3.0:
-    resolution: {integrity: sha512-yMqGUQVVCkD4tqjOJf3TnrvaaHDMYp4VlUSObbkIiuCPe/ofdMBFIAcBbCSRFWOnos6qRiTVStDwqPLUclaxIw==}
+  globals@17.4.0:
+    resolution: {integrity: sha512-hjrNztw/VajQwOLsMNT1cbJiH2muO3OROCHnbehc8eY5JyD2gqz4AcMHPqgaOR59DjgUjYAYLeH699g/eWi2jw==}
     engines: {node: '>=18'}
 
   gopd@1.2.0:
@@ -3298,10 +3298,10 @@ snapshots:
     dependencies:
       eslint: 10.1.0
 
-  eslint-plugin-cypress@6.2.1(eslint@10.1.0):
+  eslint-plugin-cypress@6.2.2(eslint@10.1.0):
     dependencies:
       eslint: 10.1.0
-      globals: 17.3.0
+      globals: 17.4.0
 
   eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.1(eslint@10.1.0))(eslint@10.1.0)(prettier@3.8.1):
     dependencies:
@@ -3519,7 +3519,7 @@ snapshots:
       minipass: 7.0.4
       path-scurry: 1.10.1
 
-  globals@17.3.0: {}
+  globals@17.4.0: {}
 
   gopd@1.2.0: {}
 
