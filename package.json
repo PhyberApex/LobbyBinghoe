@@ -20,7 +20,7 @@
     "@supabase/supabase-js": "2.104.0",
     "@vueuse/core": "14.2.1",
     "quasar": "2.19.3",
-    "vue": "3.5.32",
+    "vue": "3.5.33",
     "vue-router": "5.0.4"
   },
   "devDependencies": {
