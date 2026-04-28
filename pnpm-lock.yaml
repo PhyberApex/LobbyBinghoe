@@ -13,7 +13,7 @@ importers:
         version: 1.18.0
       '@supabase/auth-js':
         specifier: ^2.66.0
-        version: 2.105.0
+        version: 2.105.1
       '@supabase/supabase-js':
         specifier: 2.105.0
         version: 2.105.0
@@ -674,6 +674,10 @@ packages:
 
   '@supabase/auth-js@2.105.0':
     resolution: {integrity: sha512-cwNB9M4gClqOVJrlX+p2oPgqgRHiUm6hOQSRjgntplB/9XLP78/6MtvkhWdGeWpkP6npZxiLZ+VwNgeigk1wiw==}
+    engines: {node: '>=20.0.0'}
+
+  '@supabase/auth-js@2.105.1':
+    resolution: {integrity: sha512-zc4s8Xg4truwE1Q4Q8M8oUVDARMd05pKh73NyQsMbYU1HDdDN2iiKzena/yu+yJze3WrD4c092FdckPiK1rLQw==}
     engines: {node: '>=20.0.0'}
 
   '@supabase/functions-js@2.105.0':
@@ -2661,6 +2665,10 @@ snapshots:
   '@standard-schema/spec@1.1.0': {}
 
   '@supabase/auth-js@2.105.0':
+    dependencies:
+      tslib: 2.8.1
+
+  '@supabase/auth-js@2.105.1':
     dependencies:
       tslib: 2.8.1
 
