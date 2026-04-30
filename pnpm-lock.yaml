@@ -70,8 +70,8 @@ importers:
         specifier: 10.9.0
         version: 10.9.0(@typescript-eslint/parser@8.56.0(eslint@10.2.1)(typescript@5.9.3))(eslint@10.2.1)(vue-eslint-parser@10.4.0(eslint@10.2.1))
       jsdom:
-        specifier: 29.1.0
-        version: 29.1.0
+        specifier: 29.1.1
+        version: 29.1.1
       npm-run-all2:
         specifier: 8.0.4
         version: 8.0.4
@@ -92,7 +92,7 @@ importers:
         version: 8.0.10(@types/node@24.12.2)(esbuild@0.27.2)(sass@1.99.0)(yaml@2.8.2)
       vitest:
         specifier: 4.1.5
-        version: 4.1.5(@types/node@24.12.2)(jsdom@29.1.0)(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.2)(sass@1.99.0)(yaml@2.8.2))
+        version: 4.1.5(@types/node@24.12.2)(jsdom@29.1.1)(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.2)(sass@1.99.0)(yaml@2.8.2))
       vue-tsc:
         specifier: 3.2.7
         version: 3.2.7(typescript@5.9.3)
@@ -1489,8 +1489,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  jsdom@29.1.0:
-    resolution: {integrity: sha512-YNUc7fB9QuvSSQWfrH0xF+TyABkxUwx8sswgIDaCrw4Hol8BghdZDkITtZheRJeMtzWlnTfsM3bBBusRvpO1wg==}
+  jsdom@29.1.1:
+    resolution: {integrity: sha512-ECi4Fi2f7BdJtUKTflYRTiaMxIB0O6zfR1fX0GXpUrf6flp8QIYn1UT20YQqdSOfk2dfkCwS8LAFoJDEppNK5Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24.0.0}
     peerDependencies:
       canvas: ^3.0.0
@@ -3577,7 +3577,7 @@ snapshots:
       glob: 10.3.10
       nopt: 7.2.0
 
-  jsdom@29.1.0:
+  jsdom@29.1.1:
     dependencies:
       '@asamuzakjp/css-color': 5.1.11
       '@asamuzakjp/dom-selector': 7.1.1
@@ -4103,7 +4103,7 @@ snapshots:
       sass: 1.99.0
       yaml: 2.8.2
 
-  vitest@4.1.5(@types/node@24.12.2)(jsdom@29.1.0)(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.2)(sass@1.99.0)(yaml@2.8.2)):
+  vitest@4.1.5(@types/node@24.12.2)(jsdom@29.1.1)(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.2)(sass@1.99.0)(yaml@2.8.2)):
     dependencies:
       '@vitest/expect': 4.1.5
       '@vitest/mocker': 4.1.5(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.2)(sass@1.99.0)(yaml@2.8.2))
@@ -4127,7 +4127,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.12.2
-      jsdom: 29.1.0
+      jsdom: 29.1.1
     transitivePeerDependencies:
       - msw
 
