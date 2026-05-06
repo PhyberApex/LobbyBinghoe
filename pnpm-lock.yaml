@@ -64,8 +64,8 @@ importers:
         specifier: 10.3.0
         version: 10.3.0
       eslint-plugin-cypress:
-        specifier: 6.4.0
-        version: 6.4.0(@typescript-eslint/parser@8.56.0(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0)
+        specifier: 6.4.1
+        version: 6.4.1(@typescript-eslint/parser@8.56.0(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0)
       eslint-plugin-vue:
         specifier: 10.9.1
         version: 10.9.1(@typescript-eslint/parser@8.56.0(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0)(vue-eslint-parser@10.4.0(eslint@10.3.0))
@@ -1206,8 +1206,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@6.4.0:
-    resolution: {integrity: sha512-zdGXFSmTH4w2A+2aU/Abna2s8Vcz5mDxDsnAXP5Vl+pERWRQxlSE2qrrmriNUEKZ62tlOA87b9AOnJX49tOhAQ==}
+  eslint-plugin-cypress@6.4.1:
+    resolution: {integrity: sha512-8mnfR3q0Lr41Fu9SYZGeZ5nbSBgtS44+bbtSs7k0KvfoQ2pPmK43IvaTP6FGTfwBTN6S7w027CpqjrLAd65AYA==}
     peerDependencies:
       '@typescript-eslint/parser': '>=8'
       eslint: '>=9'
@@ -1400,8 +1400,8 @@ packages:
     deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
-  globals@17.5.0:
-    resolution: {integrity: sha512-qoV+HK2yFl/366t2/Cb3+xxPUo5BuMynomoDmiaZBIdbs+0pYbjfZU+twLhGKp4uCZ/+NbtpVepH5bGCxRyy2g==}
+  globals@17.6.0:
+    resolution: {integrity: sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==}
     engines: {node: '>=18'}
 
   gopd@1.2.0:
@@ -3317,10 +3317,10 @@ snapshots:
     dependencies:
       eslint: 10.3.0
 
-  eslint-plugin-cypress@6.4.0(@typescript-eslint/parser@8.56.0(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0):
+  eslint-plugin-cypress@6.4.1(@typescript-eslint/parser@8.56.0(eslint@10.3.0)(typescript@5.9.3))(eslint@10.3.0):
     dependencies:
       eslint: 10.3.0
-      globals: 17.5.0
+      globals: 17.6.0
     optionalDependencies:
       '@typescript-eslint/parser': 8.56.0(eslint@10.3.0)(typescript@5.9.3)
 
@@ -3534,7 +3534,7 @@ snapshots:
       minipass: 7.0.4
       path-scurry: 1.10.1
 
-  globals@17.5.0: {}
+  globals@17.6.0: {}
 
   gopd@1.2.0: {}
 
