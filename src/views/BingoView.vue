@@ -8,17 +8,17 @@ const error = ref("");
 const isLoading = ref(false);
 
 const v4 = new RegExp(
-    /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,
+  /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,
 );
 
 const validate = () => {
   error.value = "";
   if (!bingoId.value) {
-    error.value = "Please enter a card ID";
+    error.value = "Bitte gib eine Karten-ID ein.";
     return false;
   }
   if (!bingoId.value.match(v4)) {
-    error.value = "Please enter a valid card ID";
+    error.value = "Keine gültige Karten-ID. Format: xxxxxxxx-xxxx-4xxx-…";
     return false;
   }
   return true;
@@ -36,11 +36,11 @@ const navigate = async () => {
 };
 
 const isValidId = computed(() =>
-    bingoId.value ? bingoId.value.match(v4) !== null : true
+  bingoId.value ? bingoId.value.match(v4) !== null : true,
 );
 
 const handleKeyPress = (event: KeyboardEvent) => {
-  if (event.key === 'Enter') {
+  if (event.key === "Enter") {
     navigate();
   }
 };
@@ -48,155 +48,179 @@ const handleKeyPress = (event: KeyboardEvent) => {
 
 <template>
   <main class="page-container">
-    <q-card class="my-card" bordered>
-      <q-card-section class="card-header bg-primary text-white">
-        <div class="text-h5 text-center">Welcome to LobbyBinghoe! 🎲</div>
-        <div class="text-subtitle2 text-center q-mt-sm">Create a new game or join an existing one</div>
-      </q-card-section>
+    <div class="home-content">
+      <h1 class="home-title">LobbyBinghoe</h1>
+      <p class="home-sub">Bingo für LobbyHoes. Hör Hobbylos, mach Kreuze, ruf Bingo.</p>
 
-      <q-card-section class="q-pt-lg">
-        <div class="row q-col-gutter-md">
-          <!-- Create New Card Section -->
-          <div class="col-12">
-            <q-btn
-                to="/bingo/new"
-                color="primary"
-                class="full-width create-btn"
-                size="large"
-            >
-              <template v-slot:default>
-                <div class="row items-center">
-                  <q-icon name="add_box" size="24px" class="q-mr-sm" />
-                  <div>
-                    <div class="text-subtitle1 text-weight-bold">Create New Card</div>
-                    <div class="text-caption">Start a fresh bingo card</div>
-                  </div>
-                </div>
-              </template>
-            </q-btn>
-          </div>
+      <div class="actions-row">
+        <q-btn
+          to="/bingo/new"
+          class="primary-btn"
+          size="large"
+          unelevated
+          no-caps
+        >
+          <q-icon name="add_box" size="20px" class="q-mr-sm" />
+          Neue Karte
+        </q-btn>
+      </div>
 
-          <div class="col-12">
-            <div class="text-center text-subtitle1 text-grey-7 q-py-md">
-              - OR -
-            </div>
-          </div>
+      <div class="join-section">
+        <div class="divider-label">oder mit einer Karten-ID beitreten</div>
 
-          <!-- Join Existing Card Section -->
-          <div class="col-12">
-            <div class="text-subtitle1 text-weight-bold q-mb-sm">Search Existing Card</div>
-            <q-input
-                filled
-                v-model.trim="bingoId"
-                placeholder="Enter Card ID"
-                @keyup="handleKeyPress"
-                :error="!!error"
-                :error-message="error"
-                class="q-mb-md"
-                bottom-slots
-            >
-              <template v-slot:prepend>
-                <q-icon name="badge" />
-              </template>
-              <template v-slot:append>
-                <q-icon
-                    v-if="bingoId"
-                    :name="isValidId ? 'check_circle' : 'error'"
-                    :color="isValidId ? 'positive' : 'negative'"
-                />
-              </template>
-              <template v-slot:hint>
-                Enter a valid card ID to use it
-              </template>
-            </q-input>
+        <q-input
+          filled
+          v-model.trim="bingoId"
+          label="Karten-ID"
+          placeholder="xxxxxxxx-xxxx-4xxx-..."
+          @keyup="handleKeyPress"
+          :error="!!error"
+          :error-message="error"
+          class="id-input"
+          bottom-slots
+          dark
+          bg-color="bg-raised"
+        >
+          <template v-slot:prepend>
+            <q-icon name="badge" style="color: var(--text-secondary)" />
+          </template>
+          <template v-slot:append>
+            <q-icon
+              v-if="bingoId"
+              :name="isValidId ? 'check_circle' : 'error'"
+              :style="
+                isValidId ? 'color: var(--green)' : 'color: var(--q-negative)'
+              "
+            />
+          </template>
+        </q-input>
 
-            <q-btn
-                color="secondary"
-                class="full-width join-btn"
-                size="large"
-                @click="navigate"
-                :loading="isLoading"
-                :disable="!bingoId"
-            >
-              <template v-slot:default>
-                <div class="row items-center">
-                  <q-icon name="search" size="24px" class="q-mr-sm" />
-                  <div class="text-subtitle1">Search Card</div>
-                </div>
-              </template>
-            </q-btn>
-          </div>
-        </div>
-      </q-card-section>
+        <q-btn
+          class="join-btn"
+          size="large"
+          unelevated
+          no-caps
+          @click="navigate"
+          :loading="isLoading"
+          :disable="!bingoId"
+        >
+          <q-icon name="search" size="20px" class="q-mr-sm" />
+          Karte suchen
+        </q-btn>
+      </div>
 
-      <!-- Quick Tips Section -->
-      <q-card-section class="bg-grey-2">
-        <div class="text-subtitle2 text-weight-bold q-mb-sm">Quick Tips:</div>
-        <ul class="q-ma-none text-grey-8">
-          <li>Create a new card to start a fresh game</li>
-          <li>Use an existing Card ID to join friends</li>
-          <li>Share your Card ID with others to play together</li>
-        </ul>
-      </q-card-section>
-    </q-card>
+      <ul class="tips-list">
+        <li>Kein Account nötig, alles bleibt im Browser</li>
+        <li>Karten-ID teilen und zusammen mitspielen</li>
+        <li>Jede Karte gehört zu einer Episode</li>
+      </ul>
+    </div>
   </main>
 </template>
 
 <style scoped>
 .page-container {
   min-height: 100vh;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  background-color: var(--bg-base);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1.5rem 2rem;
 }
 
-.my-card {
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.home-content {
+  width: 100%;
+  max-width: 440px;
 }
 
-.card-header {
-  background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
-  padding: 2rem 1.5rem;
+.home-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--amber);
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.5px;
 }
 
-.create-btn {
+.home-sub {
+  color: var(--text-secondary);
+  margin: 0 0 2rem;
+  font-size: 0.95rem;
+}
+
+.actions-row {
+  margin-bottom: 2rem;
+}
+
+.primary-btn {
+  width: 100%;
+  background-color: var(--amber);
+  color: var(--amber-fg);
+  font-weight: 700;
+  letter-spacing: 0.3px;
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 48px;
+  transition: background-color 0.15s ease-out;
 }
 
-.create-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+.primary-btn:hover {
+  background-color: oklch(78% 0.19 72);
+}
+
+.join-section {
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 1.25rem;
+  background-color: var(--bg-raised);
+  margin-bottom: 2rem;
+}
+
+.divider-label {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 1rem;
+}
+
+.id-input {
+  margin-bottom: 0.75rem;
 }
 
 .join-btn {
+  width: 100%;
+  background-color: var(--bg-overlay);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  font-weight: 600;
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 44px;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
 }
 
 .join-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+  background-color: oklch(74% 0.06 72 / 0.15);
+  border-color: var(--amber-dim);
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-li {
-  padding: 4px 0;
+.tips-list li {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  padding: 0.3rem 0 0.3rem 1.2rem;
   position: relative;
-  padding-left: 1.5rem;
 }
 
-li::before {
-  content: "•";
-  color: var(--q-primary);
+.tips-list li::before {
+  content: "·";
   position: absolute;
-  left: 0.5rem;
+  left: 0.3rem;
+  color: var(--amber-dim);
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 </style>

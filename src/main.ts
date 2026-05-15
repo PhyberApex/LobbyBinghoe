@@ -19,6 +19,9 @@ app.use(Quasar, {
     Notify,
     Dialog,
   },
+  config: {
+    dark: true,
+  },
 });
 
 app.mount("#app");

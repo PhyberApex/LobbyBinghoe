@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, ref} from 'vue';
+import { computed, ref, watch } from "vue";
 
 interface FAQ {
   question: string;
@@ -12,230 +12,286 @@ const expandedItem = ref<number | null>(null);
 
 const faqs: FAQ[] = [
   {
-    question: "What is LobbyBinghoe?",
-    answer: "LobbyBinghoe is a bingo web application designed specifically for fans of the German podcast 'Hobbylos' by Rezo and Julien Bäm. It adds an interactive element to your podcast listening experience.",
-    category: "General",
-    icon: "casino"
+    question: "Was ist LobbyBinghoe?",
+    answer:
+      "LobbyBinghoe ist eine Bingo-App speziell für Fans des deutschen Podcasts 'Hobbylos' von Rezo und Julien Bäm. Hör rein und mach Kreuze, wenn du etwas vorhergesagt hast.",
+    category: "Allgemein",
+    icon: "casino",
   },
   {
-    question: "How do I play LobbyBinghoe?",
-    answer: "To play, simply listen to the 'Hobbylos' podcast and mark off items on your bingo card as they come up during the show. The goal is to get a bingo by completing a row, column, or diagonal on your card.",
+    question: "Wie spiele ich LobbyBinghoe?",
+    answer:
+      "Hör den 'Hobbylos'-Podcast und markiere Felder auf deiner Karte, sobald die entsprechenden Dinge passieren. Bingo gibt es, wenn eine Reihe, Spalte oder Diagonale vollständig markiert ist.",
     category: "Gameplay",
-    icon: "sports_esports"
+    icon: "sports_esports",
   },
   {
-    question: "Do I need to create an account to play?",
-    answer: "Currently, LobbyBinghoe does not require user accounts. Your bingo card information is stored locally in your browser.",
+    question: "Brauche ich einen Account?",
+    answer:
+      "Nein. Alles wird lokal in deinem Browser gespeichert, kein Account nötig.",
     category: "Account",
-    icon: "person_outline"
+    icon: "person_outline",
   },
   {
-    question: "How are my bingo cards saved?",
-    answer: "Your bingo card IDs are saved in your browser's local storage. This means they will persist between sessions on the same device, but won't be available if you switch to a different device or browser.",
-    category: "Technical",
-    icon: "save"
+    question: "Wie werden meine Karten gespeichert?",
+    answer:
+      "Karten-IDs und dein Spielfortschritt werden im lokalen Speicher deines Browsers gesichert. Sie bleiben zwischen Sitzungen erhalten, sind aber nicht auf anderen Geräten oder Browsern verfügbar.",
+    category: "Technik",
+    icon: "save",
   },
   {
-    question: "Is LobbyBinghoe available on mobile devices?",
-    answer: "Yes, LobbyBinghoe is designed to be responsive and should work well on both desktop and mobile browsers.",
-    category: "Technical",
-    icon: "smartphone"
+    question: "Funktioniert LobbyBinghoe auf dem Handy?",
+    answer: "Ja, die App läuft auf Desktop- und Mobilgeräten.",
+    category: "Technik",
+    icon: "smartphone",
   },
   {
-    question: "Who are LobbyHoes?",
-    answer: "LobbyHoes is the affectionate term used for listeners of the 'Hobbylos' podcast by Rezo and Julien Bäm.",
-    category: "General",
-    icon: "groups"
+    question: "Wer sind die LobbyHoes?",
+    answer:
+      "LobbyHoes ist die liebevolle Bezeichnung für Hörerinnen und Hörer des 'Hobbylos'-Podcasts von Rezo und Julien Bäm.",
+    category: "Allgemein",
+    icon: "groups",
   },
 ];
 
-const categories = [...new Set(faqs.map(faq => faq.category))];
+const categories = [...new Set(faqs.map((faq) => faq.category))];
 
 const toggleExpanded = (index: number) => {
   expandedItem.value = expandedItem.value === index ? null : index;
 };
 
-const searchQuery = ref('');
+const searchQuery = ref("");
 const filteredFaqs = computed(() => {
   if (!searchQuery.value) return faqs;
   const query = searchQuery.value.toLowerCase();
-  return faqs.filter(faq =>
+  return faqs.filter(
+    (faq) =>
       faq.category.toLowerCase().includes(query) ||
       faq.question.toLowerCase().includes(query) ||
-      faq.answer.toLowerCase().includes(query)
+      faq.answer.toLowerCase().includes(query),
   );
+});
+
+watch(searchQuery, () => {
+  expandedItem.value = null;
 });
 </script>
 
 <template>
-  <q-page class="faq-page q-pa-md">
-    <!-- Header Section -->
-    <div class="header-section q-mb-lg">
-      <div class="text-h4 text-weight-bold text-primary q-mb-md">
-        Frequently Asked Questions
-      </div>
-      <div class="text-subtitle1 text-grey-7">
-        Find answers to common questions about LobbyBinghoe
-      </div>
-    </div>
+  <div class="faq-page">
+    <h1 class="faq-title">FAQ</h1>
 
-    <!-- Search Bar -->
     <q-input
-        v-model="searchQuery"
-        filled
-        class="q-mb-lg search-bar"
-        placeholder="Search FAQs..."
-        clearable
+      v-model="searchQuery"
+      filled
+      class="search-bar q-mb-md"
+      label="Suche"
+      clearable
+      dark
     >
       <template v-slot:prepend>
-        <q-icon name="search" />
+        <q-icon name="search" style="color: var(--text-secondary)" />
       </template>
       <template v-slot:append v-if="searchQuery">
-        <q-badge color="primary" text-color="white" floating>
-          {{ filteredFaqs.length }}
-        </q-badge>
+        <span class="result-count">{{ filteredFaqs.length }}</span>
       </template>
     </q-input>
 
-    <!-- FAQ Categories -->
-    <div class="row q-col-gutter-md q-mb-lg">
-      <div
-          v-for="category in categories"
-          :key="category"
-          class="col-auto"
+    <div class="category-row q-mb-lg">
+      <button
+        v-for="category in categories"
+        :key="category"
+        class="cat-chip"
+        :class="{ 'cat-chip--active': searchQuery === category }"
+        @click="searchQuery = searchQuery === category ? '' : category"
       >
-        <q-chip
-            clickable
-            :color="searchQuery === category ? 'primary' : 'grey-3'"
-            :text-color="searchQuery === category ? 'white' : 'grey-8'"
-            @click="searchQuery = searchQuery === category ? '' : category"
-        >
-          {{ category }}
-        </q-chip>
-      </div>
+        {{ category }}
+      </button>
     </div>
 
-    <!-- FAQ List -->
     <div class="faq-list">
-      <q-slide-transition v-for="(faq, index) in filteredFaqs" :key="index">
-        <q-card
-            flat
-            bordered
-            class="faq-item q-mb-md"
-            :class="{ 'faq-item-expanded': expandedItem === index }"
+      <div
+        v-for="(faq, index) in filteredFaqs"
+        :key="index"
+        class="faq-item"
+        :class="{ 'faq-item--open': expandedItem === index }"
+      >
+        <button
+          class="faq-trigger"
+          @click="toggleExpanded(index)"
+          :aria-expanded="expandedItem === index ? 'true' : 'false'"
         >
-          <q-item
-              clickable
-              v-ripple
-              @click="toggleExpanded(index)"
-              class="faq-question"
-          >
-            <q-item-section avatar>
-              <q-avatar color="primary" text-color="white">
-                <q-icon :name="faq.icon" />
-              </q-avatar>
-            </q-item-section>
+          <q-icon :name="faq.icon ?? 'help'" class="faq-icon" size="18px" />
+          <span class="faq-q">{{ faq.question }}</span>
+          <q-icon
+            name="expand_more"
+            class="faq-chevron"
+            :class="{ 'faq-chevron--open': expandedItem === index }"
+            size="18px"
+          />
+        </button>
 
-            <q-item-section>
-              <q-item-label class="text-subtitle1 text-weight-medium">
-                {{ faq.question }}
-              </q-item-label>
-              <q-item-label caption>
-                {{ faq.category }}
-              </q-item-label>
-            </q-item-section>
+        <div
+          class="faq-answer-wrap"
+          :class="{ 'faq-answer-wrap--open': expandedItem === index }"
+        >
+          <div class="faq-answer-inner">
+            <p class="faq-answer">{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
 
-            <q-item-section side>
-              <q-icon
-                  :name="expandedItem === index ? 'expand_less' : 'expand_more'"
-                  size="24px"
-                  class="transition-transform"
-                  :class="{ 'rotate-180': expandedItem === index }"
-              />
-            </q-item-section>
-          </q-item>
-
-          <q-separator />
-
-          <q-card-section
-              class="faq-answer"
-              :class="{ 'faq-answer-visible': expandedItem === index }"
-          >
-            <p class="text-body1 q-ma-none">{{ faq.answer }}</p>
-          </q-card-section>
-        </q-card>
-      </q-slide-transition>
-
-      <!-- No Results Message -->
       <div v-if="searchQuery && filteredFaqs.length === 0" class="no-results">
-        <q-icon name="search_off" size="48px" color="grey-5" />
-        <div class="text-h6 text-grey-7 q-mt-md">No matching questions found</div>
-        <div class="text-body1 text-grey-6">Try adjusting your search terms</div>
+        <q-icon name="search_off" size="40px" style="color: var(--text-secondary)" />
+        <div class="no-results-text q-mt-md">Keine passenden Fragen gefunden</div>
       </div>
     </div>
-  </q-page>
+  </div>
 </template>
 
 <style scoped>
 .faq-page {
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--bg-base);
+  min-height: 100vh;
 }
 
-.header-section {
-  text-align: center;
-  padding: 2rem 0;
+.faq-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--amber);
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.5px;
 }
 
 .search-bar {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 100%;
+}
+
+.result-count {
+  font-size: 0.75rem;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cat-chip {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 0.5rem 0.875rem;
+  min-height: 36px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.15s ease-out, color 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.cat-chip:hover {
+  border-color: var(--amber-dim);
+  color: var(--text-primary);
+}
+
+.cat-chip--active {
+  border-color: var(--amber);
+  background-color: oklch(74% 0.06 72 / 0.15);
+  color: var(--amber);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .faq-item {
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: var(--bg-raised);
+  transition: border-color 0.15s ease-out;
+}
+
+.faq-item--open {
+  border-color: oklch(74% 0.06 72 / 0.5);
+}
+
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  min-height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.faq-icon {
+  color: var(--amber);
+  flex: 0 0 auto;
+}
+
+.faq-q {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.faq-chevron {
+  flex: 0 0 auto;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease-out;
+}
+
+.faq-chevron--open {
+  transform: rotate(180deg);
+}
+
+.faq-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.22s ease-out;
+}
+
+.faq-answer-wrap--open {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-wrap > * {
   overflow: hidden;
 }
 
-.faq-item:hover {
-  transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item-expanded {
-  background-color: #f8f9fa;
-}
-
-.faq-question {
-  padding: 1rem;
+.faq-answer-inner {
+  padding-bottom: 0.25rem;
 }
 
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 1rem;
-}
-
-.faq-answer-visible {
-  max-height: 500px;
-  padding: 1rem;
-}
-
-.transition-transform {
-  transition: transform 0.3s ease;
-}
-
-.rotate-180 {
-  transform: rotate(180deg);
+  padding: 0 1rem 0.75rem 3rem;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 .no-results {
   text-align: center;
   padding: 3rem;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin-top: 2rem;
+}
+
+.no-results-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 </style>

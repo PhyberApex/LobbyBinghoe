@@ -1,0 +1,38 @@
+:root {
+  --bg-base: oklch(14% 0.015 55);
+  --bg-raised: oklch(20% 0.02 55);
+  --bg-overlay: oklch(27% 0.018 55);
+  --bg-inset: oklch(11% 0.012 55);
+
+  --text-primary: oklch(92% 0.01 75);
+  --text-secondary: oklch(62% 0.022 75);
+
+  --amber: oklch(74% 0.19 72);
+  --amber-dim: oklch(74% 0.06 72);
+  --amber-fg: oklch(16% 0.04 72);
+
+  --green: oklch(70% 0.18 142);
+  --green-fg: oklch(16% 0.03 142);
+  --border-subtle: oklch(28% 0.018 55);
+  --shadow: oklch(0% 0 0 / 0.45);
+}
+
+html,
+body {
+  background-color: var(--bg-base);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

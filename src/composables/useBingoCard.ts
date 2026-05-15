@@ -1,4 +1,4 @@
-import { ref, readonly, computed } from "vue";
+import { ref, readonly, computed, watch } from "vue";
 import { useStorage } from "@vueuse/core";
 import validateBingoValues, {
   validateLobbyHoeBingo,
@@ -15,6 +15,12 @@ const myCards = useStorage(
     id: string;
     episode_name: string;
   }[],
+  localStorage,
+);
+
+const savedValues = useStorage(
+  "bingo-values",
+  {} as Record<string, boolean[][]>,
   localStorage,
 );
 
@@ -57,9 +63,21 @@ export default () => {
       loading.value = false;
       bingoCard.value = {
         ...newCard,
-        bingoValues: defaultBingoValues(),
+        bingoValues: savedValues.value[newCard.id] ?? defaultBingoValues(),
         isLocal: !!myCards.value.find((card) => card.id === newCard.id),
       };
+      watch(
+        () => bingoCard.value?.bingoValues,
+        (vals) => {
+          if (bingoCard.value && vals) {
+            savedValues.value = {
+              ...savedValues.value,
+              [bingoCard.value.id]: vals,
+            };
+          }
+        },
+        { deep: true },
+      );
     } catch (error) {
       loading.value = false;
       throw error;
@@ -94,7 +112,7 @@ export default () => {
         body: JSON.stringify({ episodeName }),
       });
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`${response.status}`);
       }
       const newCard = await response.json();
       myCards.value = [...myCards.value, newCard];
