@@ -1,69 +1,52 @@
-import { createClient } from '@supabase/supabase-js';
+import { getDatabase } from '@netlify/database';
 
-const v4 = new RegExp(
-  /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,
-);
+const v4 = /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
 
-export const handler = async (event, context) => {
-
-  // Only allow POST requests
+export const handler = async (event) => {
   if (event.httpMethod !== 'GET') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const supabaseKey = process.env.SUPABASE_KEY;
 
-  const queryParams = event.queryStringParameters;
-  // Example: accessing a parameter named 'id'
-  const id = queryParams.id;
+  const id = event.queryStringParameters?.id;
 
-  if (!id.match(v4)) {
+  if (!id || !v4.test(id)) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: "Please provide a valid id" })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: 'Please provide a valid id' }),
     };
   }
 
-  // Provide fetch to the Supabase client
-  const supabase = createClient(supabaseUrl, supabaseKey);
+  const db = getDatabase();
 
   try {
-    // Example: Fetch data from a Supabase table
-    const { data, error } = await supabase
-      .from('bingo_card')
-      .select('*')
-      .eq('id', id);
+    const rows = await db.sql`
+      SELECT id, episode_name, bingo_facts FROM bingo_card WHERE id = ${id}
+    `;
 
-    if (error) throw error;
-    if (data.length === 0){
+    if (rows.length === 0) {
       return {
         statusCode: 404,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ error: "Card not found" })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Card not found' }),
       };
     }
-    console.log("HI")
-    const fetchedCard = data[0];
+
+    const card = rows[0];
     return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        id: fetchedCard.id,
-        episode: fetchedCard.episode_name,
-        bingoFacts: fetchedCard.bingo_facts,
-      })
+        id: card.id,
+        episode: card.episode_name,
+        bingoFacts: card.bingo_facts,
+      }),
     };
   } catch (error) {
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ error: error.message })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: error.message }),
     };
   }
 };
