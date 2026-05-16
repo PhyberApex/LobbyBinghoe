@@ -8,4 +8,4 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/phyberapex/LobbyBinghoe)
 ![Website](https://img.shields.io/website?url=http%3A//bingo.phyberapex.de/)
 
-Deployed at [https://bingo.phyberapex.de](https://bingo.phyberapex.de/)
+Deployed at [https://lobby-binghoe.netlify.app](https://lobby-binghoe.netlify.app/)
