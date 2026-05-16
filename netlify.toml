@@ -6,3 +6,8 @@
   node_bundler = "esbuild"
   external_node_modules = ["@netlify/database"]
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
