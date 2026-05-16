@@ -27,7 +27,9 @@ export const handler = async (event) => {
   }
 
   const episode = JSON.parse(event.body).episodeName;
-  const db = getDatabase();
+  const db = getDatabase({
+    connectionString: process.env.NETLIFY_DATABASE_URL
+  });
 
   try {
     const factsRows = await db.sql`SELECT fact_text FROM bingo_fact`;

@@ -17,7 +17,9 @@ export const handler = async (event) => {
     };
   }
 
-  const db = getDatabase();
+  const db = getDatabase({
+    connectionString: process.env.NETLIFY_DATABASE_URL
+  });
 
   try {
     const rows = await db.sql`
