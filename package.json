@@ -40,7 +40,7 @@
     "npm-run-all2": "9.0.2",
     "prettier": "3.8.4",
     "sass": "1.101.0",
-    "start-server-and-test": "3.0.9",
+    "start-server-and-test": "3.0.11",
     "typescript": "6.0.3",
     "vite": "8.0.16",
     "vitest": "4.1.8",
