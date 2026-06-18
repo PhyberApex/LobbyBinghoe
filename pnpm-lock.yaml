@@ -79,8 +79,8 @@ importers:
         specifier: 1.101.0
         version: 1.101.0
       start-server-and-test:
-        specifier: 3.0.9
-        version: 3.0.9
+        specifier: 3.0.11
+        version: 3.0.11
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -1772,8 +1772,8 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  start-server-and-test@3.0.9:
-    resolution: {integrity: sha512-Wxa3llUystTkCRiRx/QzsGS7+/X/la2al6DaX9Q3iWjCZqSQTEcHTIXwvNiGEg0cnEQeY/UBqB7aUZth50IJoA==}
+  start-server-and-test@3.0.11:
+    resolution: {integrity: sha512-NRapOwJl6jr1DNSaQ+SRukHI2OKcFZA2Iv2tfTW9fI/S+6YmJGiwacR+0MG3o5p39lY4xWUOE5JFkKJBZUjxuQ==}
     engines: {node: ^22 || >=24}
     hasBin: true
 
@@ -3783,7 +3783,7 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  start-server-and-test@3.0.9:
+  start-server-and-test@3.0.11:
     dependencies:
       arg: 5.0.2
       check-more-types: 2.24.0
