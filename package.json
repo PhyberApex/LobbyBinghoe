@@ -18,7 +18,7 @@
     "@quasar/extras": "2.0.2",
     "@netlify/database": "latest",
     "@vueuse/core": "14.3.0",
-    "quasar": "2.21.2",
+    "quasar": "2.21.4",
     "vue": "3.5.39",
     "vue-router": "5.1.0"
   },
