@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@netlify/database':
         specifier: latest
-        version: 1.1.0
+        version: 2.0.0
       '@quasar/extras':
         specifier: 2.0.3
         version: 2.0.3
@@ -18,8 +18,8 @@ importers:
         specifier: 14.4.0
         version: 14.4.0(vue@3.5.41(typescript@7.0.2))
       quasar:
-        specifier: 2.24.0
-        version: 2.24.0
+        specifier: 2.25.0
+        version: 2.25.0
       vue:
         specifier: 3.5.41
         version: 3.5.41(typescript@7.0.2)
@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@quasar/vite-plugin':
         specifier: 2.0.0
-        version: 2.0.0(@vitejs/plugin-vue@5.2.4(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.24.0)(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
+        version: 2.0.0(@vitejs/plugin-vue@5.2.4(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.25.0)(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -314,13 +314,13 @@ packages:
     resolution: {integrity: sha512-r3ZZhRjEcfEdKIZnoB1RusNgvHuaBRqfCzV4Gi+5A9yUX0S4HTws/ASWqt13wL4y4I+0rqsWGdA2w7EQXHi3+Q==}
     engines: {node: '>=19.0.0'}
 
-  '@netlify/database@1.1.0':
-    resolution: {integrity: sha512-Y36JMyQfxwHxvtFzF8K+2PyooGFQXzPNINw/guujQfMujfAwUTwv7f6XiSL3c5orNy8YZTqVVWVjkbFarhDRjw==}
-    engines: {node: '>=20.6.1'}
+  '@netlify/database@2.0.0':
+    resolution: {integrity: sha512-Gn6gOSMrCo576okpLqR8Rn001KRlxMrO1VI459Hf+RYa151OgDc/FAhWcwi0Ituyf2xW1FI03p+y86WWY1+cLw==}
+    engines: {node: '>=22.12.0'}
 
-  '@netlify/runtime-utils@2.3.0':
-    resolution: {integrity: sha512-cW8weDvsKV7zfia2m5EcBy6KILGoPD+eYZ3qWNGnIo05DGF28goPES0xKSDkNYgAF/2rRSIhie2qcBhbGVgSRg==}
-    engines: {node: ^18.14.0 || >=20}
+  '@netlify/runtime-utils@3.0.0':
+    resolution: {integrity: sha512-OHo40+V3QZkR+UrDjqhN+LekrAby/dSSJxsvyYs9i88E/mSl3goB/ysoL+VYROm190egxmQyRYlHK7vL4GeHBQ==}
+    engines: {node: '>=22.12.0'}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1846,8 +1846,8 @@ packages:
   quansync@0.2.11:
     resolution: {integrity: sha512-AifT7QEbW9Nri4tAwR5M/uzpBuqfZf+zwaEM/QkzEjj7NBuFD2rBuy0K3dE+8wltbezDV7JMA0WfnCPYRSYbXA==}
 
-  quasar@2.24.0:
-    resolution: {integrity: sha512-esoimUWc5e4Ms89mYZRDaeGqHWAIcqZVMqDnkCsMFlR3sFwdURRRDXrFzHTFLsY53KBE4krp2qqurnf91eYZNA==}
+  quasar@2.25.0:
+    resolution: {integrity: sha512-orpGzerOcbPHKT0ah6tljzQlYiY5a+qcCmIXzKSEa9pKgyfP6BfPjmi1k46yOddurbnXosjCZt3/qZUv2nMeIw==}
     engines: {node: '>= 10.18.1', npm: '>= 6.13.4', yarn: '>= 1.21.1'}
 
   queue-microtask@1.2.3:
@@ -2574,10 +2574,10 @@ snapshots:
 
   '@neondatabase/serverless@1.1.0': {}
 
-  '@netlify/database@1.1.0':
+  '@netlify/database@2.0.0':
     dependencies:
       '@neondatabase/serverless': 1.1.0
-      '@netlify/runtime-utils': 2.3.0
+      '@netlify/runtime-utils': 3.0.0
       pg: 8.20.0
       waddler: 0.1.1(@neondatabase/serverless@1.1.0)(pg@8.20.0)
       ws: 8.20.1
@@ -2604,7 +2604,7 @@ snapshots:
       - postgres
       - utf-8-validate
 
-  '@netlify/runtime-utils@2.3.0': {}
+  '@netlify/runtime-utils@3.0.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -2686,10 +2686,10 @@ snapshots:
 
   '@quasar/extras@2.0.3': {}
 
-  '@quasar/vite-plugin@2.0.0(@vitejs/plugin-vue@5.2.4(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.24.0)(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))':
+  '@quasar/vite-plugin@2.0.0(@vitejs/plugin-vue@5.2.4(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.25.0)(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))':
     dependencies:
       '@vitejs/plugin-vue': 5.2.4(vite@8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
-      quasar: 2.24.0
+      quasar: 2.25.0
       vite: 8.2.1(@types/node@24.13.3)(sass@1.102.0)(yaml@2.9.0)
       vue: 3.5.41(typescript@7.0.2)
 
@@ -4015,7 +4015,7 @@ snapshots:
 
   quansync@0.2.11: {}
 
-  quasar@2.24.0: {}
+  quasar@2.25.0: {}
 
   queue-microtask@1.2.3: {}
 
