@@ -28,8 +28,8 @@ importers:
         version: 5.2.0(@vue/compiler-sfc@3.5.41)(rolldown@1.2.5)(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
     devDependencies:
       '@quasar/vite-plugin':
-        specifier: 2.0.0
-        version: 2.0.0(@vitejs/plugin-vue@5.2.4(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.25.1)(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
+        specifier: 2.0.1
+        version: 2.0.1(@vitejs/plugin-vue@5.2.4(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.25.1)(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -416,8 +416,8 @@ packages:
   '@quasar/extras@2.0.4':
     resolution: {integrity: sha512-JWls5J+xkgEn6u86NSBLRUXf92RSTlImmYNcF77JtbOwuZgQfQTg7RpLskqRTmzpU3Kkpd3TLDcVT0xwWwiphA==}
 
-  '@quasar/vite-plugin@2.0.0':
-    resolution: {integrity: sha512-eY47hWU6sW/v9vEIlT/OcXLy8KqQyjmqiO7Ws8r8CmLxYQ50poUfYttX8dqOgamOGzvkm2H5urIcdf04OQ04Nw==}
+  '@quasar/vite-plugin@2.0.1':
+    resolution: {integrity: sha512-FHw7tjI9aNowd56Eyc6sNlNvkwdb3WCR2mOltUCUZq4byUC6MMG+BDoG38Rxpt6NC4kVgYxyy+p7+cHg8zyiNQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       '@vitejs/plugin-vue': ^6.0.5
@@ -2655,7 +2655,7 @@ snapshots:
 
   '@quasar/extras@2.0.4': {}
 
-  '@quasar/vite-plugin@2.0.0(@vitejs/plugin-vue@5.2.4(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.25.1)(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))':
+  '@quasar/vite-plugin@2.0.1(@vitejs/plugin-vue@5.2.4(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2)))(quasar@2.25.1)(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))':
     dependencies:
       '@vitejs/plugin-vue': 5.2.4(vite@8.2.2(@types/node@24.13.3)(sass@1.103.1)(yaml@2.9.0))(vue@3.5.41(typescript@7.0.2))
       quasar: 2.25.1
