@@ -15,7 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@quasar/extras": "2.0.4",
+    "@quasar/extras": "2.1.0",
     "@netlify/database": "latest",
     "@vueuse/core": "14.4.0",
     "quasar": "2.32.3",
