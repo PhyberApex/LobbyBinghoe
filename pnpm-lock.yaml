@@ -168,7 +168,7 @@ importers:
     dependencies:
       '@netlify/database':
         specifier: latest
-        version: 2.0.1
+        version: 2.0.2
       '@quasar/extras':
         specifier: 2.1.0
         version: 2.1.0
@@ -462,8 +462,8 @@ packages:
     resolution: {integrity: sha512-r3ZZhRjEcfEdKIZnoB1RusNgvHuaBRqfCzV4Gi+5A9yUX0S4HTws/ASWqt13wL4y4I+0rqsWGdA2w7EQXHi3+Q==}
     engines: {node: '>=19.0.0'}
 
-  '@netlify/database@2.0.1':
-    resolution: {integrity: sha512-ikz0NcVgeOe62Sic5MEFMyv/yMWtzhMLcynXTDftTL3rVEMoJL16mjnU9gNZ6G80lBngjjPjZrDOyAS1j+Kt3A==}
+  '@netlify/database@2.0.2':
+    resolution: {integrity: sha512-qhnl81XcQWJqGtL3yU20dIlDU0t50N5KZOtwSyEd8n3p6V2ZIcaDBBSaq//ORi2DGm7zEJnrNW293JKRD0/EYA==}
     engines: {node: '>=22.12.0'}
 
   '@netlify/runtime-utils@3.0.0':
@@ -1882,8 +1882,8 @@ packages:
   pkg-types@2.3.0:
     resolution: {integrity: sha512-SIqCzDRg0s9npO5XQ3tNZioRY1uK06lA41ynBC1YmFTmnY6FjUjVt6s4LoADmwoig1qqD0oK8h1p/8mlMx8Oig==}
 
-  postcss-selector-parser@7.1.4:
-    resolution: {integrity: sha512-HeP7D2wyhkR+XaK6v4W8oRF62Dsz4flyuczALJp61GckGm42u1saSSJ/0auvcBqxs3jMRFEcPK34At/0JBKdOg==}
+  postcss-selector-parser@7.1.7:
+    resolution: {integrity: sha512-wWBro/7hJ40ye6TPiXkUQoXKCw23xSsjriUvqd7Uls9Sso3oLiON1flc18cCdnjgCRXw4fBVqUJJeOdDTh3P3g==}
     engines: {node: '>=4'}
 
   postcss@8.5.28:
@@ -2619,7 +2619,7 @@ snapshots:
 
   '@neondatabase/serverless@1.1.0': {}
 
-  '@netlify/database@2.0.1':
+  '@netlify/database@2.0.2':
     dependencies:
       '@neondatabase/serverless': 1.1.0
       '@netlify/runtime-utils': 3.0.0
@@ -3385,7 +3385,7 @@ snapshots:
       eslint: 10.14.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 7.1.4
+      postcss-selector-parser: 7.1.7
       semver: 7.8.5
       vue-eslint-parser: 10.4.0(eslint@10.14.0)
       xml-name-validator: 5.0.0
@@ -3957,7 +3957,7 @@ snapshots:
       exsolve: 1.0.8
       pathe: 2.0.3
 
-  postcss-selector-parser@7.1.4:
+  postcss-selector-parser@7.1.7:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
