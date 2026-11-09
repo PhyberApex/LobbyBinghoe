@@ -39,7 +39,7 @@
     "jsdom": "31.0.0",
     "npm-run-all2": "9.0.4",
     "prettier": "3.9.10",
-    "sass": "1.107.1",
+    "sass": "1.108.0",
     "start-server-and-test": "3.0.13",
     "typescript": "7.0.2",
     "vite": "8.3.6",
