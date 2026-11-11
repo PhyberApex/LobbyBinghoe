@@ -219,8 +219,8 @@ importers:
         specifier: 10.14.0
         version: 10.14.0
       eslint-plugin-cypress:
-        specifier: 7.0.3
-        version: 7.0.3(@typescript-eslint/parser@8.60.1(eslint@10.14.0)(typescript@7.0.2))(eslint@10.14.0)
+        specifier: 7.0.4
+        version: 7.0.4(@typescript-eslint/parser@8.60.1(eslint@10.14.0)(typescript@7.0.2))(eslint@10.14.0)
       eslint-plugin-vue:
         specifier: 10.12.0
         version: 10.12.0(@typescript-eslint/parser@8.60.1(eslint@10.14.0)(typescript@7.0.2))(eslint@10.14.0)(vue-eslint-parser@10.4.0(eslint@10.14.0))
@@ -1240,8 +1240,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@7.0.3:
-    resolution: {integrity: sha512-l9xGy+lBRwSUYqVu3oRMp1BxM32o4xJfj5v58pneSOgrn2k8bTxmyFERIHUvofinr7eUACgXazfnhHZyWDyj0g==}
+  eslint-plugin-cypress@7.0.4:
+    resolution: {integrity: sha512-+SbWR09N1yx/yPi9tiGhdloebPcQSUzpX9t4bLt4pNbQlzQNw7+ajr+PI9kuhzT0GHruA/pSFZw0ebXQMFl83w==}
     peerDependencies:
       '@typescript-eslint/parser': '>=8'
       eslint: '>=10'
@@ -3320,7 +3320,7 @@ snapshots:
     dependencies:
       eslint: 10.14.0
 
-  eslint-plugin-cypress@7.0.3(@typescript-eslint/parser@8.60.1(eslint@10.14.0)(typescript@7.0.2))(eslint@10.14.0):
+  eslint-plugin-cypress@7.0.4(@typescript-eslint/parser@8.60.1(eslint@10.14.0)(typescript@7.0.2))(eslint@10.14.0):
     dependencies:
       eslint: 10.14.0
       globals: 17.14.0
