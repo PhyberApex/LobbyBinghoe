@@ -25,7 +25,7 @@
   "devDependencies": {
     "@quasar/vite-plugin": "2.0.2",
     "@rushstack/eslint-patch": "1.16.1",
-    "@tsconfig/node24": "24.0.5",
+    "@tsconfig/node24": "24.0.6",
     "@types/jsdom": "30.0.0",
     "@types/node": "26.6.6",
     "@vitejs/plugin-vue": "5.2.4",
