@@ -187,7 +187,7 @@ importers:
     dependencies:
       '@netlify/database':
         specifier: latest
-        version: 2.0.3
+        version: 2.0.4
       '@quasar/extras':
         specifier: 2.1.0
         version: 2.1.0
@@ -238,8 +238,8 @@ importers:
         specifier: 10.15.0
         version: 10.15.0
       eslint-plugin-cypress:
-        specifier: 7.1.0
-        version: 7.1.0(@typescript-eslint/parser@8.60.1(eslint@10.15.0)(typescript@7.0.2))(eslint@10.15.0)
+        specifier: 7.2.0
+        version: 7.2.0(@typescript-eslint/parser@8.60.1(eslint@10.15.0)(typescript@7.0.2))(eslint@10.15.0)
       eslint-plugin-vue:
         specifier: 10.12.1
         version: 10.12.1(@typescript-eslint/parser@8.60.1(eslint@10.15.0)(typescript@7.0.2))(eslint@10.15.0)(vue-eslint-parser@10.4.0(eslint@10.15.0))
@@ -460,12 +460,12 @@ packages:
     resolution: {integrity: sha512-r3ZZhRjEcfEdKIZnoB1RusNgvHuaBRqfCzV4Gi+5A9yUX0S4HTws/ASWqt13wL4y4I+0rqsWGdA2w7EQXHi3+Q==}
     engines: {node: '>=19.0.0'}
 
-  '@netlify/database@2.0.3':
-    resolution: {integrity: sha512-Ghq0NYwsQyT9GjgUhpbeOlk98RD6PeV2skhQIy/q6tPMiJz/p7NkfcixkXSouHfyJZmOEI6eweZeIDKAa3VLmA==}
+  '@netlify/database@2.0.4':
+    resolution: {integrity: sha512-my24Wff6MaKuUN3xNY6A1d5GCSsPEgIDMqoeDroaPCRsOCdtQfk4t6mHMF7s35mNmnrOkAQERXqViRKlGjT/kQ==}
     engines: {node: '>=22.12.0'}
 
-  '@netlify/runtime-utils@3.0.1':
-    resolution: {integrity: sha512-PythjseqdFTvaTK28IiRZ/w0YOZKgyBDxiXuCNEwCBxidnKZ7najsOMtstwwzmsRtfHbmXHOB5NLaGCnvnvBTg==}
+  '@netlify/runtime-utils@3.1.0':
+    resolution: {integrity: sha512-mzlRsXQCo9a9Y4W/jiKvPrDOgmoVu+QIsQ2Lehi7hFJD7KlvEsCucJ2i1DOgN3LpYVbo8gyrxmGZFT2Jlf6SHA==}
     engines: {node: '>=22.12.0'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -1288,8 +1288,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@7.1.0:
-    resolution: {integrity: sha512-aCTx12rYVF/JEVRLL+hEpxGw0VUyvYm36lLqlFLTN74Y5B/nsh7HAFYIPP+RexisCFVCAiWMt0qrbQTCHGIT2w==}
+  eslint-plugin-cypress@7.2.0:
+    resolution: {integrity: sha512-R3PMPaQyVvscLo9ZgDNl4S2FSdqroBv3kagMZK/iS7uoji0hzku6TpUmhGL3POSU/Phn+gbMA6Dk2agvTBY+lA==}
     peerDependencies:
       '@typescript-eslint/parser': '>=8'
       eslint: '>=10'
@@ -2637,10 +2637,10 @@ snapshots:
 
   '@neondatabase/serverless@1.1.0': {}
 
-  '@netlify/database@2.0.3':
+  '@netlify/database@2.0.4':
     dependencies:
       '@neondatabase/serverless': 1.1.0
-      '@netlify/runtime-utils': 3.0.1
+      '@netlify/runtime-utils': 3.1.0
       pg: 8.20.0
       waddler: 0.1.1(@neondatabase/serverless@1.1.0)(pg@8.20.0)
       ws: 8.22.1
@@ -2667,7 +2667,7 @@ snapshots:
       - postgres
       - utf-8-validate
 
-  '@netlify/runtime-utils@3.0.1': {}
+  '@netlify/runtime-utils@3.1.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -3415,7 +3415,7 @@ snapshots:
     dependencies:
       eslint: 10.15.0
 
-  eslint-plugin-cypress@7.1.0(@typescript-eslint/parser@8.60.1(eslint@10.15.0)(typescript@7.0.2))(eslint@10.15.0):
+  eslint-plugin-cypress@7.2.0(@typescript-eslint/parser@8.60.1(eslint@10.15.0)(typescript@7.0.2))(eslint@10.15.0):
     dependencies:
       eslint: 10.15.0
       globals: 17.14.0
