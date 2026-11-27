@@ -192,8 +192,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       '@vueuse/core':
-        specifier: 15.0.0
-        version: 15.0.0(vue@3.5.46(typescript@7.0.2))
+        specifier: 15.1.0
+        version: 15.1.0(vue@3.5.46(typescript@7.0.2))
       quasar:
         specifier: 2.35.6
         version: 2.35.6
@@ -726,8 +726,8 @@ packages:
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
 
-  '@types/web-bluetooth@0.0.21':
-    resolution: {integrity: sha512-oIQLCGWtcFZy2JW77j9k8nHzAOpqMHLQejDA48XXMWH6tjCQHz5RCFz1bzsmROyL6PUm+LLnUiI4BCn221inxA==}
+  '@types/web-bluetooth@0.0.22':
+    resolution: {integrity: sha512-4O7kU0Ut0irZvFyk3EvgDrzFYBQI80Puhkb65I7eV6WTZX4iOo5zoDrEfjDBRB7x5Stz31csoHO4hAjSiRTALw==}
 
   '@typescript-eslint/eslint-plugin@8.60.1':
     resolution: {integrity: sha512-JQ4S5GB0tfjO8BuJ4fcX+HodkzJjYBV+7OJ+wLygaX7OGQ7FudyHL4NSCA6ob+w3Yn+5MkKIozOwQhXeM7opVg==}
@@ -1062,18 +1062,18 @@ packages:
       vue:
         optional: true
 
-  '@vueuse/core@15.0.0':
-    resolution: {integrity: sha512-Zv67h5mrk7YHDJsRObx+DXaCBz6RKBUpxqLesJ+3xZNPG6yuQs7ja7kg3veFrrouYLWAqydQ7CwGEbLVxB43Ng==}
+  '@vueuse/core@15.1.0':
+    resolution: {integrity: sha512-OuZ5ecLw/sikX0HFjlJM/p/PkfL0567Ntfov9G0jYlw92QqZpPVikZOoB1Mpe4unZ+7E/QQ+uFpEgAjj2FYRbw==}
     engines: {node: '>=22'}
     peerDependencies:
       vue: ^3.5.0
 
-  '@vueuse/metadata@15.0.0':
-    resolution: {integrity: sha512-sfWE5LADAKJ0KnjtGliMdSN8Ij/L7uP6rXIZlgPloAI4zvvefbw6H5Lt7KJA6RqQOYgVqWF5Guj50HHMIzygBg==}
+  '@vueuse/metadata@15.1.0':
+    resolution: {integrity: sha512-yHKFelRTdQdp7vdjXXEw68Wh9v8OgyxWm1v1aHbGM6Z4qbqHhB6QgB8MTNB76pZYh22wPeALCdr8qjShlxPBHA==}
     engines: {node: '>=22'}
 
-  '@vueuse/shared@15.0.0':
-    resolution: {integrity: sha512-vbNXhGrbV53xPOMSyOzMHQRvhMgZf7oNDw2RChUetVxwTIEkInQ1joZ9JbT0G3z2n2AJNjvmCWeM9ySYrnvogA==}
+  '@vueuse/shared@15.1.0':
+    resolution: {integrity: sha512-JAbQLO+vOULt8MPR4oRbvstBuztTTMIX4LOfCGeBvp9JSgj5OppZDing3gKDrmlyUQvYYFSPIX4dxkfJgdsxWQ==}
     engines: {node: '>=22'}
     peerDependencies:
       vue: ^3.5.0
@@ -2845,7 +2845,7 @@ snapshots:
 
   '@types/tough-cookie@4.0.5': {}
 
-  '@types/web-bluetooth@0.0.21': {}
+  '@types/web-bluetooth@0.0.22': {}
 
   '@typescript-eslint/eslint-plugin@8.60.1(@typescript-eslint/parser@8.60.1(eslint@10.15.0)(typescript@7.0.2))(eslint@10.15.0)(typescript@7.0.2)':
     dependencies:
@@ -3208,16 +3208,16 @@ snapshots:
       typescript: 7.0.2
       vue: 3.5.46(typescript@7.0.2)
 
-  '@vueuse/core@15.0.0(vue@3.5.46(typescript@7.0.2))':
+  '@vueuse/core@15.1.0(vue@3.5.46(typescript@7.0.2))':
     dependencies:
-      '@types/web-bluetooth': 0.0.21
-      '@vueuse/metadata': 15.0.0
-      '@vueuse/shared': 15.0.0(vue@3.5.46(typescript@7.0.2))
+      '@types/web-bluetooth': 0.0.22
+      '@vueuse/metadata': 15.1.0
+      '@vueuse/shared': 15.1.0(vue@3.5.46(typescript@7.0.2))
       vue: 3.5.46(typescript@7.0.2)
 
-  '@vueuse/metadata@15.0.0': {}
+  '@vueuse/metadata@15.1.0': {}
 
-  '@vueuse/shared@15.0.0(vue@3.5.46(typescript@7.0.2))':
+  '@vueuse/shared@15.1.0(vue@3.5.46(typescript@7.0.2))':
     dependencies:
       vue: 3.5.46(typescript@7.0.2)
 
